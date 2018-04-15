@@ -26,8 +26,7 @@ SECRET_KEY = '8-+4t(=rjn50(97q9n&=4tv2var^pg^g!s#4bm(x_lbfqa05)@'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['kieltest.herokuapp.com','localhost']
-
+ALLOWED_HOSTS = ['kielindustrialjan.herokuapp.com','localhost']
 
 # Application definition
 
