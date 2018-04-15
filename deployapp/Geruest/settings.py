@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8-+4t(=rjn50(97q9n&=4tv2var^pg^g!s#4bm(x_lbfqa05)@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['kielindustrialjan.herokuapp.com','localhost']
@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'Geruest.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -91,6 +91,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+"""
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
@@ -142,5 +143,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage' 
 # Activate Django-Heroku.
+"""
 import django_heroku
 django_heroku.settings(locals())
+"""
