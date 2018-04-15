@@ -26,7 +26,7 @@ SECRET_KEY = '8-+4t(=rjn50(97q9n&=4tv2var^pg^g!s#4bm(x_lbfqa05)@'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['kielindustrialjan.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['kielindustrialjan.herokuapp.com','localhost','127.0.0.1']
 
 # Application definition
 
@@ -80,6 +80,9 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 """
 DATABASES = {
     'default': {
