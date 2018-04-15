@@ -142,4 +142,5 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage' 
 # Activate Django-Heroku.
+import django_heroku
 django_heroku.settings(locals())
