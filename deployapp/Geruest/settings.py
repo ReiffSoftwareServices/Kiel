@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'Geruest.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -81,21 +81,21 @@ DATABASES = {
     }
 }
 """
+"""
 import dj_database_url
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 """
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydatabase',
-        'USER': 'mydatabaseuser',
-        'PASSWORD': 'mypassword',
-        'HOST': '127.0.0.1',
+        'NAME': 'd72isuab6roqea',
+        'USER': 'oiutxmwutleasn',
+        'PASSWORD': '4727f8e07421edb4c6b3704ec08aa3b254b8cd1e961003325956a0e69b082c01',
+        'HOST': 'ec2-54-163-240-54.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
-"""
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
