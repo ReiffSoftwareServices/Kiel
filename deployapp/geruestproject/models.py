@@ -44,7 +44,7 @@ class Inventory(models.Model):
 
 
     class Meta:
-        verbose_name_plural = 'Lager'
+        verbose_name_plural = 'Leistungsverzeichnis'
 
     def __str__(self):
         return '{}'.format(self.Inventory_Name)
@@ -78,7 +78,7 @@ class Project(models.Model):
 
 
     class Meta:
-        verbose_name_plural = 'Projekte'
+        verbose_name_plural = 'Gerüstliste'
 
     def __str__(self):
         return '{}, {}'.format(self.Project, self.Project_Client)
