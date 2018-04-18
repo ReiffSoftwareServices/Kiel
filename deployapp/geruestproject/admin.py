@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Client, Inventory, Project, Billing
+from .models import Client, Inventory, Project#, Billing
 
 class ClientAdmin(admin.ModelAdmin):
 
@@ -26,10 +26,10 @@ admin.site.register(Inventory)
 
 class ProjectAdmin(admin.ModelAdmin):
 
-    list_display = ('Project', 'Project_Description','Date_ProjectEntry', 'Date_SignOff', 'Mietwochen', 'Preis','Status')
+    list_display = ('Project', 'Project_Description','Date_ProjectEntry', 'Date_SignOff', 'Mietwochen', 'Status')
     #list_filter = ('Status', )
 
 
 admin.site.register(Project, ProjectAdmin)
 
-admin.site.register(Billing)
+#admin.site.register(Billing)

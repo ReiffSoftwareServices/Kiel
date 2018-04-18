@@ -27,7 +27,7 @@ class Client(models.Model):
     Contact_Phone = models.CharField(max_length = 20, blank = True, verbose_name = 'Telefon Ansprechpartner')
 
     class Meta:
-        verbose_name_plural = 'Kunden'
+        verbose_name_plural = 'Firmen'
 
     def __str__(self):
         return  '{}. {}'.format(self.Client, self.Company_Name)
@@ -56,9 +56,9 @@ class Inventory(models.Model):
 
 class Project(models.Model):
 
-    Project = models.AutoField(primary_key = True)
+    Project = models.AutoField(primary_key = True, verbose_name="Auftragsnr.")
     Project_Client = models.ForeignKey(Client, on_delete= 'SET_NULL', verbose_name = 'Firma')
-    Project_Description = models.TextField(blank = True, verbose_name = 'Projekt Beschreibung')
+    Project_Description = models.TextField(blank = True, verbose_name = 'Beschreibung')
 
     # Dates
     Date_ProjectEntry = models.DateField(default = date.today(), verbose_name= 'Eingangsdatum')
@@ -67,11 +67,11 @@ class Project(models.Model):
     Date_SignOff = models.DateField(blank = True, null = True, verbose_name= 'Abmeldedatum')
 
 
-
-    Project_Item = models.ForeignKey(Inventory, on_delete=  'SET_NULL', default = '1', verbose_name= 'Bauteil', related_name= 'Project_Item')
-    Project_Kupplung = models.ForeignKey(Inventory, on_delete= 'SET_NULL', default = 1, verbose_name= 'Kupplung', related_name= 'Project_Kupplung')
-    Project_Amount = models.IntegerField(blank= True, null = True,  verbose_name= 'Menge')
-
+				
+    #Project_Item = models.ForeignKey(Inventory, on_delete=  'SET_NULL', default = '1', verbose_name= 'Bauteil', related_name= 'Project_Item')
+    #Project_Kupplung = models.ForeignKey(Inventory, on_delete= 'SET_NULL', default = 1, verbose_name= 'Kupplung', related_name= 'Project_Kupplung')
+    #Project_Amount = models.IntegerField(blank= True, null = True,  verbose_name= 'Menge')
+				
 
 
 
@@ -84,10 +84,10 @@ class Project(models.Model):
         return '{}, {}'.format(self.Project, self.Project_Client)
 
     # Calculates the Price
-    @property
-    def Preis(self):
-        if self.Project_Amount is not None:
-            return Inventory.objects.filter(Inventory_Name = self.Project_Item).values_list('Price', flat =True)[0]
+    #@property
+    #def Preis(self):
+    #    if self.Project_Amount is not None:
+    #       return Inventory.objects.filter(Inventory_Name = self.Project_Item).values_list('Price', flat =True)[0]
 
 
 
@@ -111,7 +111,7 @@ class Project(models.Model):
 
 
 
-
+"""
 class Billing(models.Model):
 
 
@@ -144,7 +144,7 @@ class Billing(models.Model):
     # def save(self, *args, **kwargs):
     #     self.invoice_number = code_generator(size = 7, chars = string.digits)
     #     super(Billing, self).save(*args, **kwargs)
-
+"""
 
 
 
