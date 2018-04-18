@@ -2,7 +2,7 @@
 
 import csv, sys, os, django
 
-path = 'C:/Users/hayerj/Desktop/Kiel/Geruest/'
+path = 'C:/Users/jreiff/dev/deployapp/'
 sys.path.append(path)
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'Geruest.settings'
@@ -12,11 +12,11 @@ django.setup() ## This needs to be loaded for module which are not in django. Se
 
 from geruestproject.models import Inventory, Client
 
-with open('C:/Users/hayerj/Desktop/Kiel/Upload.csv') as f:
+with open('C:/Users/jreiff/dev/deployapp/management/Upload.csv') as f:
     reader = csv.reader(f, delimiter = ',')
     for row in reader:
 
-        p = Inventory(Item_Id = row[0],
-                    Name= row[1],
+        p = Inventory(
+                    Inventory_Name= row[1],
                     Price= row[2])
         p.save()

@@ -37,11 +37,10 @@ class Client(models.Model):
 
 class Inventory(models.Model):
 
-    Inventory = models.AutoField(primary_key = True)
-    Inventory_Name = models.CharField(max_length = 50, verbose_name= 'Bauteil')
+    Inventory = models.AutoField(primary_key = True, verbose_name='PosNr.')
+    Inventory_Name = models.CharField(max_length = 50, verbose_name= 'Art')
     Inventory_Description = models.TextField(blank = True, verbose_name = 'Beschreibung')
     Price = models.DecimalField(max_digits = 7, decimal_places = 2, blank = True, null = True, verbose_name= 'Preis')
-
 
     class Meta:
         verbose_name_plural = 'Leistungsverzeichnis'

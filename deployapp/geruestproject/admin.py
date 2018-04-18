@@ -19,8 +19,11 @@ class ClientAdmin(admin.ModelAdmin):
 
 admin.site.register(Client, ClientAdmin)
 
+class InventoryAdmin(admin.ModelAdmin):
+					list_display = ('Inventory','Inventory_Name','Price' )
 
-admin.site.register(Inventory)
+
+admin.site.register(Inventory, InventoryAdmin)
 
 
 
