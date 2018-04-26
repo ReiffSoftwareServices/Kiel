@@ -40,7 +40,7 @@
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-account-control" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-clipboard-check"></i> Rechnungskontrolle</a>
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-time-tracking" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-stopwatch"></i> Zeiterfassung</a>
 						<!-- <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-data-view" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Datenansicht</a> -->
-						<a class="nav-link" href="https://kielindustrialjan.herokuapp.com/admin/geruestproject/project/" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Datenansicht</a>
+						<a class="nav-link" href="https://kielindustrialjan.herokuapp.com/admin/geruestproject/project/" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Gerüstbuch</a>
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-dashboard-view" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-chart-line"></i> Dashboard</a>
 				</div>
 	</div>
