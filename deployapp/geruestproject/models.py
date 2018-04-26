@@ -55,7 +55,7 @@ class Inventory(models.Model):
 
 class Project(models.Model):
 
-    Project = models.AutoField(primary_key = True, verbose_name="Auftragsnr.")
+    Project = models.AutoField(primary_key = True, verbose_name="Gerüstnr.")
     Project_Client = models.ForeignKey(Client, on_delete= 'SET_NULL', verbose_name = 'Firma')
     Project_Description = models.TextField(blank = True, verbose_name = 'Beschreibung')
 
