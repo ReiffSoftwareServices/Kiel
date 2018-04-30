@@ -13,7 +13,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'geruestproject/css/bootstrap.css' %}" rel="stylesheet">
-
+	<!-- From Step by Step -->
+	<link rel="stylesheet" href="{% static 'geruestproject/css/main.css?v=<?php echo time(); ?>' %}">
+	<!-- From Step by Step -->
+	<link rel="stylesheet" href="{% static 'geruestproject/css/form_step_by_step.css?v=<?php echo time(); ?>' %}">
     <!-- Custom styles for this template -->
     <link href="{% static 'geruestproject/css/sidenav.css?v=<?php echo time(); ?>' %}" rel="stylesheet">
 				
@@ -54,7 +57,7 @@
 						<div class="tab-pane fade" id="tab-enhance-scaffold" role="tabpanel" aria-labelledby="v-pills-settings-tab">{% include 'interface/pages/erweiterung.php' %}</div>
 						<div class="tab-pane fade" id="tab-rebuild-scaffold" role="tabpanel" aria-labelledby="v-pills-messages-tab">{% include 'interface/pages/umbau.php' %}</div>						
 						<div class="tab-pane fade" id="tab-measurement-control" role="tabpanel" aria-labelledby="v-pills-settings-tab">{% include 'interface/pages/aufmass.php' %}</div>
-						<div class="tab-pane fade" id="tab-account-control" role="tabpanel" aria-labelledby="v-pills-settings-tab">Rechnungskontrolle</div>
+						<div class="tab-pane fade" id="tab-account-control" role="tabpanel" aria-labelledby="v-pills-settings-tab">{% include 'interface/pages/rechnung.php' %}</div>
 						<div class="tab-pane fade" id="tab-time-tracking" role="tabpanel" aria-labelledby="v-pills-settings-tab">Zeiterfassung</div>
 						<div class="tab-pane fade" id="tab-data-view" role="tabpanel" aria-labelledby="v-pills-settings-tab">Datenansicht</div>
 						<div class="tab-pane fade" id="tab-dashboard-view" role="tabpanel" aria-labelledby="v-pills-settings-tab">{% include 'interface/pages/dashboard.php' %}</div>
@@ -73,6 +76,7 @@
 	<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 	<script src="{% static 'geruestproject/js/popper.min.js' %}"></script>
 	<script src="{% static 'geruestproject/js/bootstrap.js' %}"></script>
+	<script src="{% static 'geruestproject/js/form_step_by_step.js' %}"></script>
 	<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 	<!-- <script src="holder.min.js"></script> -->
 	<script>$(function () {
