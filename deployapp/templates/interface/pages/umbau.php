@@ -1,40 +1,30 @@
 <div class="container mt-4">
-								<form>
-										<div class="form-group row">				
-
-														<label for="staticEmail" class="col-sm-2 col-form-label">Gerüstumbau</label>
-														
-										</div>
-										<div class="form-group row">
-											<label for="staticEmail" class="col-sm-2 col-form-label">Gerüstnummer:</label>
-											<div class="col-sm-10">
-													<input type="text" class="form-control" placeholder="Nummer des Gerüstes eingeben...">
-													<small id="passwordHelpBlock" class="form-text text-muted">
-															Nummer des Gerüstes, welches umgebaut werden soll.
-													</small>
-											</div>											
-										</div>
-										
-										<div class="form-group row">
-												<label for="inputPassword" class="col-sm-2 col-form-label">Mit oder Ohne Material:</label>
-												<div class="col-sm-10">
-														<div class="form-group">
-															<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name">
-																	<option>Ohne Material</option>
-																	<option>Mit Material</option>
-															</select>
-															<small id="passwordHelpBlock" class="form-text text-muted">
-																	Auswahl ob der Umbau mit oder ohne Material ist.
-															</small>
-													</div>
-												</div>
-										</div>
-										
-										<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Gerüst anmelden">
-												Gerüst anmelden
-										</button>
-										<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Speichern als PDF">
-												Speichern als PDF
-										</button>
-								</form>
-							</div>
+	<div class="card">
+	  <div class="card-body">
+		<h5 class="card-title">Gerüst-Umbau</h5>
+		<h6 class="card-subtitle mb-2 text-muted">Umbau eines bestehendes Gerüstes.</h6>
+		<p class="card-text">
+			<form>
+				<div class="btn-group btn-group-toggle" data-toggle="buttons">
+				  <label class="btn btn-secondary active">
+					<input type="radio" name="options" id="option1" autocomplete="off" checked>Mit Material
+				  </label>
+				  <label class="btn btn-secondary">
+					<input type="radio" name="options" id="option2" autocomplete="off"> Ohne Material
+				  </label>
+				</div>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Gerüstnummer</label>
+					<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Gerüstnummer auswählen...</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+					<small id="emailHelp" class="form-text text-muted">Gerüst welches abgemeldet werden soll.</small>
+				</div>
+				
+				<div class="form-group">
+					<button type="submit" class="btn btn-secondary">Umbau anmelden</button>
+				</div>
+			  
+			</form>	
+		</p>
+	  </div>
+	</div>
+</div>

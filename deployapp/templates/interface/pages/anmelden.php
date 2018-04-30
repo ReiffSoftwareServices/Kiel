@@ -1,10 +1,15 @@
 <div class="container mt-4">
 	<div class="card">
 	  <div class="card-body">
-		<h5 class="card-title">Gerüstanmeldung</h5>
+		<h5 class="card-title">Gerüst-Anmeldung</h5>
 		<h6 class="card-subtitle mb-2 text-muted">Anmeldung eines neuen Gerüstes.</h6>
 		<p class="card-text">
 			<form>
+			  <div class="form-group">
+				<label for="exampleInputEmail1">Anforderer</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Christoph Lehnertz">
+				<small id="emailHelp" class="form-text text-muted">Name der Person, welche das Gerüst anfordert.</small>
+			  </div>
 			  <div class="form-group">
 				<label for="exampleInputEmail1">Gerüstnummer</label>
 				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="3">
