@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 				<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -44,13 +44,13 @@
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-dashboard-view" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-chart-line"></i> Dashboard</a>
 				</div>
 	</div>
-			<div class="col-md-9">
+			<div class="col-md-9 form-content">
 				<div class="tab-content" id="v-pills-tabContent">
 						<div class="tab-pane fade show active" id="tab-new-scaffold" role="tabpanel" aria-labelledby="v-pills-home-tab">{% include 'interface/pages/anmelden.php' %}</div>
 						<div class="tab-pane fade" id="tab-remove-scaffold" role="tabpanel" aria-labelledby="v-pills-profile-tab">{% include 'interface/pages/abmelden.php' %}</div>
 						<div class="tab-pane fade" id="tab-enhance-scaffold" role="tabpanel" aria-labelledby="v-pills-settings-tab">{% include 'interface/pages/erweiterung.php' %}</div>
 						<div class="tab-pane fade" id="tab-rebuild-scaffold" role="tabpanel" aria-labelledby="v-pills-messages-tab">{% include 'interface/pages/umbau.php' %}</div>						
-						<div class="tab-pane fade" id="tab-measurement-control" role="tabpanel" aria-labelledby="v-pills-settings-tab">Aufmaßkontrolle</div>
+						<div class="tab-pane fade" id="tab-measurement-control" role="tabpanel" aria-labelledby="v-pills-settings-tab">{% include 'interface/pages/aufmass.php' %}</div>
 						<div class="tab-pane fade" id="tab-account-control" role="tabpanel" aria-labelledby="v-pills-settings-tab">Rechnungskontrolle</div>
 						<div class="tab-pane fade" id="tab-time-tracking" role="tabpanel" aria-labelledby="v-pills-settings-tab">Zeiterfassung</div>
 						<div class="tab-pane fade" id="tab-data-view" role="tabpanel" aria-labelledby="v-pills-settings-tab">Datenansicht</div>

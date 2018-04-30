@@ -1,32 +1,23 @@
 <div class="container mt-4">
-	<form>
-		<div class="form-group row">
-				<label for="staticEmail" class="col-sm-2 col-form-label">Gerüstnummer:</label>
-				<div class="col-sm-10">
-						<input type="text" class="form-control" placeholder="Nummer des Gerüstes auswählen...">
-						<small id="passwordHelpBlock" class="form-text text-muted">
-								Nummer des Gerüstes, welches abgemeldet werden soll.
-						</small>
-				</div>											
-			</div>
-			<div class="form-group row">
-				<label for="staticEmail" class="col-sm-2 col-form-label">Abmeldedatum:</label>
-				<div class="col-sm-10">
-						<input type="text" class="form-control" placeholder="Abmeldedatum auswählen...">
-						<small id="passwordHelpBlock" class="form-text text-muted">
-								Datum zu welchem das Gerüst abgemeldet werden soll.
-						</small>
-				</div>											
-			</div>
-		<div class="form-group row">
-
-			<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Gerüst abmelden">
-					Gerüst abmelden
-			</button> 
-			
-			<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Speichern als PDF">
-					Speichern als PDF
-			</button>
+	<div class="card">
+	  <div class="card-body">
+		<h5 class="card-title">Gerüstabmeldung</h5>
+		<h6 class="card-subtitle mb-2 text-muted">Abmeldung eines Gerüstes.</h6>
+		<p class="card-text">
+			<form>
+			  <div class="form-group">
+				<label for="exampleInputEmail1">Gerüstnummer</label>
+				<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Gerüstnummer auswählen...</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+				<small id="emailHelp" class="form-text text-muted">Gerüst welches abgemeldet werden soll.</small>
+			  </div>
+			  <div class="form-group">
+				<label for="exampleInputEmail1">Abmeldedatum</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Beispieltext">
+				<small id="emailHelp" class="form-text text-muted">Datum zu welchem das Gerüst abgemeldet werden soll.</small>
+			  </div>
+			  <button type="submit" class="btn btn-secondary">Gerüst abmelden</button>
+			</form>	
+		</p>
+	  </div>
 	</div>
-	</form>
 </div>
