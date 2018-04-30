@@ -14,7 +14,6 @@
 				  </label>
 				</div>
 				<div class="form-group">
-					<label for="exampleInputEmail1">Gerüstnummer</label>
 					<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Gerüstnummer auswählen...</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
 					<small id="emailHelp" class="form-text text-muted">Gerüst welches abgemeldet werden soll.</small>
 				</div>

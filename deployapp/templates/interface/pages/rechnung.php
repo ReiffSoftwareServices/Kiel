@@ -8,8 +8,8 @@
 				<div class="wrapper">
 				  <ul class="steps">
 					<li class="is-active">Rechnungsdaten</li>
-					<li>Step 2</li>
-					<li>Step 3</li>
+					<li>Überprüfung</li>
+					<li>Gerüstübersicht</li>
 				  </ul>
 				  <form class="form-wrapper">
 					<fieldset class="section is-active">
@@ -21,37 +21,30 @@
 					  <div class="button btn btn-secondary">Eingabe bestätigen</div>
 					</fieldset>
 					<fieldset class="section">
-					  <h3>Account Type</h3>
+					  <h3>Berechneter Preis: 4.885€</h3>
 					  <div class="row cf">
 						<div class="four col">
 						  <input type="radio" name="r1" id="r1" checked>
 						  <label for="r1">
-							<h4>Designer</h4>
+							<h4>Preis korrekt</h4>
 						  </label>
 						</div>
 						<div class="four col">
 						  <input type="radio" name="r1" id="r2"><label for="r2">
-							<h4>Developer</h4>
-						  </label>
-						</div>
-						<div class="four col">
-						  <input type="radio" name="r1" id="r3"><label for="r3">
-							<h4>Project Manager</h4>
+							<h4>Preis falsch</h4>
 						  </label>
 						</div>
 					  </div>
-					  <div class="button btn btn-secondary">Next</div>
+					  <div class="button btn btn-secondary">Bestätigen</div>
 					</fieldset>
 					<fieldset class="section">
-					  <h3>Choose a Password</h3>
-					  <input type="password" name="password" id="password" placeholder="Password">
-					  <input type="password" name="password2" id="password2" placeholder="Re-enter Password">
-					  <input class="submit button btn btn-secondary" type="submit" value="Sign Up">
+					  <h3>Gerüstübersicht ...</h3>					  
+					  <input class="submit button btn btn-secondary" type="submit" value="OK">
 					</fieldset>
 					<fieldset class="section">
-					  <h3>Account Created!</h3>
-					  <p>Your account has now been created.</p>
-					  <div class="button btn btn-secondary">Reset Form</div>
+					  <h3>Abgeschlossen</h3>
+					  <p>Rechnungskontrolle erfolgreich.</p>
+					  <div class="button btn btn-secondary">Neue Rechnung</div>
 					</fieldset>
 				  </form>
 				</div>
