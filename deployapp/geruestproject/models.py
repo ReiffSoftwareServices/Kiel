@@ -1,18 +1,14 @@
 from django.db import models
-from django.db.models import F
-
-# Create your models here.
-
-from django import utils
 from datetime import date
+from django import utils
 import random, string
-# Create your models here.
+import numpy as np
+
 
 
 class Client(models.Model):
 
     #Company
-    Client = models.AutoField(primary_key = True)
     Company_Name   = models.CharField(max_length = 50, blank = True, verbose_name = 'Firma')
     Company_Email = models.EmailField(max_length = 254, blank= True, verbose_name = 'Firma Email')
     Company_Phone = models.CharField(max_length = 20, blank = True, verbose_name = 'Telefon Firma')
@@ -27,125 +23,152 @@ class Client(models.Model):
     Contact_Phone = models.CharField(max_length = 20, blank = True, verbose_name = 'Telefon Ansprechpartner')
 
     class Meta:
-        verbose_name_plural = 'Firmen'
+        verbose_name_plural = 'Kunden'
 
     def __str__(self):
-        return  '{}. {}'.format(self.Client, self.Company_Name)
+        return  '{}. {}'.format(self.Company_Name, self.Contact_LastName)
 
 
 
 
-class Inventory(models.Model):
+class Inventar(models.Model):
 
-    Inventory = models.AutoField(primary_key = True, verbose_name='PosNr.')
-    Inventory_Name = models.CharField(max_length = 50, verbose_name= 'Art')
-    Inventory_Description = models.TextField(blank = True, verbose_name = 'Beschreibung')
-    Price = models.DecimalField(max_digits = 7, decimal_places = 2, blank = True, null = True, verbose_name= 'Preis')
+    Name = models.CharField(max_length = 50, verbose_name= 'Bauteil')
+    Einheit= models.CharField(max_length= 50, verbose_name= 'Einheit')
+    Beschreibung = models.TextField(blank = True, verbose_name = 'Beschreibung')
+    Preis = models.DecimalField(max_digits = 7, decimal_places = 2, blank = True, null = True, verbose_name= 'Preis') ## Not sure whether they can be zero!
+
+    # Miete
+    Einheit_Miete= models.CharField(max_length= 50, verbose_name= 'Einheit Miete')
+    Beschreibung_Miete= models.CharField(max_length= 50, verbose_name= 'Beschreibung Miete')
+    Preis_Miete= models.DecimalField(max_digits= 7, decimal_places= 2, blank= True, null= True, verbose_name= 'Preis Miete')
+
 
     class Meta:
         verbose_name_plural = 'Leistungsverzeichnis'
 
     def __str__(self):
-        return '{}'.format(self.Inventory_Name)
+        return '{}'.format(self.Name)
 
 
+class Projekt(models.Model):
+
+    ''' Table just for creating the project name '''
+
+    Project_Name= models.CharField(max_length= 50, primary_key= True, verbose_name= 'Projekt Name')
+
+    class Meta:
+        verbose_name_plural= 'Projekte'
+
+    def __str__(self):
+        return '{}'.format(self.Project_Name)
 
 
+class Geruestbuch(models.Model):
 
+    Geruestnummer= models.AutoField(primary_key= True)
+    Kunde = models.ForeignKey(Client, on_delete= 'PROTECT', verbose_name = 'Firma')
+    Projekt = models.ForeignKey(Projekt, on_delete= 'PROTECT', verbose_name= 'Projekt Name')
+    Beschreibung = models.TextField(blank = True, verbose_name = 'Projekt Beschreibung')
+    Achse= models.CharField(max_length= 10, blank= True, verbose_name= 'Achse/ Ort')
 
-class Project(models.Model):
+    #Dates
+    Eingangsdatum = models.DateField(default = date.today(), verbose_name= 'Eingangsdatum')
+    Aufbaudatum = models.DateField(blank = True, null = True, verbose_name= 'Aufbaudatum')
+    Abmeldedatum = models.DateField(blank = True, null = True, verbose_name= 'Abmeldedatum')
 
-    Project = models.AutoField(primary_key = True, verbose_name="Gerüstnr.")
-    Project_Client = models.ForeignKey(Client, on_delete= 'SET_NULL', verbose_name = 'Firma')
-    Project_Description = models.TextField(blank = True, verbose_name = 'Beschreibung')
+    #Renting
+    Mietbeginn= models.DateField(blank= True, null= True, verbose_name= 'Miet-Beginn')
+    Mietende= models.DateField(blank= True, null= True, verbose_name= 'Miet-Ende')
 
-    # Dates
-    Date_ProjectEntry = models.DateField(default = date.today(), verbose_name= 'Eingangsdatum')
-    Date_Construction = models.DateField(blank = True, null = True, verbose_name= 'Aufbaudatum')
-    Date_Dismant = models.DateField(blank = True, null = True, verbose_name= 'Abbaudatum')
-    Date_SignOff = models.DateField(blank = True, null = True, verbose_name= 'Abmeldedatum')
-
-
-				
-    #Project_Item = models.ForeignKey(Inventory, on_delete=  'SET_NULL', default = '1', verbose_name= 'Bauteil', related_name= 'Project_Item')
-    #Project_Kupplung = models.ForeignKey(Inventory, on_delete= 'SET_NULL', default = 1, verbose_name= 'Kupplung', related_name= 'Project_Kupplung')
-    #Project_Amount = models.IntegerField(blank= True, null = True,  verbose_name= 'Menge')
-				
-
-
+    #Price
+    Preis= models.DecimalField(max_digits= 12, decimal_places= 2, blank= True, null= True, verbose_name= 'Preis')
 
 
 
     class Meta:
-        verbose_name_plural = 'Gerüstliste'
+        verbose_name_plural= 'Geruestbuch'
 
     def __str__(self):
-        return '{}, {}'.format(self.Project, self.Project_Client)
-
-    # Calculates the Price
-    #@property
-    #def Preis(self):
-    #    if self.Project_Amount is not None:
-    #       return Inventory.objects.filter(Inventory_Name = self.Project_Item).values_list('Price', flat =True)[0]
+        return '{}'.format(self.Projekt)
 
 
 
-    # Calculates the week
     @property
     def Mietwochen(self):
-        if self.Date_SignOff is not None:
-            time_diff = (self.Date_SignOff - self.Date_ProjectEntry).days
-            return int(round(time_diff/7))
+        if (self.Aufbaudatum is not None) and (self.Abmeldedatum is not None):
+            time_diff= (self.Abmeldedatum- self.Aufbaudatum).days
+            return int(round(time_diff/ 7)- 6)                                     # Set to six weeks now
         else:
             return None
 
 
-    # Get status
+    # Get the status of the Project
     @property
     def Status(self):
-        if (self.Date_SignOff is not None) and (self.Date_SignOff < date.today()):
+        if (self.Abmeldedatum is not None) and (self.Abmeldedatum < date.today()):
             return 'Abgeschlossen'
         else:
             return 'Laufend'
 
 
+    def save(self, *args, **kwargs):
+        '''Calculating the price per Geruestnummer'''
+        #1. Getting all equipment from geruestnummer and the corresponding prices.
+        query= Equipments.objects.filter(Geruestnummer= self.Geruestnummer).values_list('Equipment' ,flat= True)    #Output= <QuerySet [1, 2, 1, 2]>, which represents the equipment_id per geruestnummer
+        preise= []
+        for i in query:
+            preise.append(Inventar.objects.filter(id= i).values_list('Preis', flat= True)[0])
 
-"""
-class Billing(models.Model):
+        #2. Getting the amount per equipment
+        query= Equipments.objects.filter(Geruestnummer= self.Geruestnummer).values_list('Laenge', 'Breite', 'Hoehe', 'Stueck', 'Stunde')
+        amount= []
+        for i in query:
+            if (i[0] is not None) and (i[1] is not None) and (i[2] is not None):  #Laenge* Breite* Hoehe
+                amount.append(i[0]* i[1]* i[2])
+            elif ((i[3] is not None) and (i[4] is not None)): #Not sure whether this is required!
+                amount.append(i[3]* i[4])
+            else:
+                amount.append(0)
+        #3. amount= (1,2), preise= (2,3). Elementwise multipilication of the two lists. If None a zero is assigned!
+        output= []
+        for i in range(len(amount)):
+            if (amount[i] is not None) and (preise[i] is not None):
+                output.append(amount[i]* preise[i])
+            else:
+                output.append(0)
+        output= sum(output)
+
+        self.Preis= output
+        super(Geruestbuch, self).save(*args, **kwargs)
+
+    @property
+    def Miete():
+        pass
 
 
-    # Get invoice_number
-    def code_generator(size = 5, chars = string.digits):
-        return ''.join(random.choice(chars) for _ in range(size))
 
 
 
-    #invoice = models.AutoField(primary_key = True)
-    invoice_number = models.IntegerField(primary_key = True, default = code_generator(), verbose_name = 'Rechnugsnummer')
-    invoice_client = models.ForeignKey(Project, on_delete = 'SET_NULL', blank = False, verbose_name = 'Kunde')
+class Equipments(models.Model):
 
+    '''
+    Equipment per Geruestnummer
+    '''
 
+    Geruestnummer= models.ForeignKey(Geruestbuch, on_delete= 'SET_NULL', verbose_name= 'Geruestnummer')
+    Equipment= models.ForeignKey(Inventar, on_delete= 'SET_NULL', verbose_name= 'Inventar')
+
+    #Metrics
+    Laenge= models.DecimalField(max_digits= 7, decimal_places= 2, blank= True, null= True, verbose_name= 'Laenge')
+    Breite= models.DecimalField(max_digits= 7, decimal_places= 2, blank= True, null= True, verbose_name= 'Breite')
+    Hoehe= models.DecimalField(max_digits= 7, decimal_places= 2, blank= True, null= True, verbose_name= 'Hoehe')
+    Stueck= models.DecimalField(max_digits= 7, decimal_places= 2, blank= True, null= True, verbose_name= 'Stueck')
+    Stunde= models.DecimalField(max_digits= 7, decimal_places= 2, blank= True, null= True, verbose_name= 'Stunde')
 
 
     class Meta:
-        verbose_name_plural = 'Rechnungen'
-
-    def __str__(self):
-        return '{}, {}'.format(self.invoice_number)
-
-
-    # # Get invoice_number
-    # import random, string
-    # def code_generator(size = 7, chars = string.digits):
-    #     return ''.join(random.choice(chars) for _ in range(size))
-
-
-    # def save(self, *args, **kwargs):
-    #     self.invoice_number = code_generator(size = 7, chars = string.digits)
-    #     super(Billing, self).save(*args, **kwargs)
-"""
-
-
+        verbose_name_plural= 'Equipment'
 
 
 

@@ -73,14 +73,14 @@ WSGI_APPLICATION = 'Geruest.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-"""
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 """
 import dj_database_url
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
@@ -89,11 +89,12 @@ DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd72isuab6roqea',
-        'USER': 'oiutxmwutleasn',
-        'PASSWORD': '4727f8e07421edb4c6b3704ec08aa3b254b8cd1e961003325956a0e69b082c01',
-        'HOST': 'ec2-54-163-240-54.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'NAME': 'd48omkoqbdtpau', #
+        'USER': 'qlqltwuoijbmhk', #
+        'PASSWORD': 'b321da90dbe63475a5210790cb755511bc72316d60941af9a9dc4c1d29510993', #
+        'HOST': 'ec2-54-225-200-15.compute-1.amazonaws.com', #
+        'PORT': '5432', #
+
     }
 }
 # Password validation
@@ -145,7 +146,7 @@ STATICFILES_DIRS = [
         os.path.join(BASE_DIR, "static"),
     ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage' 
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # Activate Django-Heroku.
 """
 import django_heroku

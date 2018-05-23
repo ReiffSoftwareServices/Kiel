@@ -2,7 +2,9 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Client, Inventory, Project#, Billing
+from .models import Client, Inventar, Projekt, Geruestbuch, Equipments
+
+
 
 class ClientAdmin(admin.ModelAdmin):
 
@@ -16,23 +18,25 @@ class ClientAdmin(admin.ModelAdmin):
     search_fields = ('Company_Name', 'Contact_LastName')
 
 
-
 admin.site.register(Client, ClientAdmin)
 
-class InventoryAdmin(admin.ModelAdmin):
-					list_display = ('Inventory','Inventory_Name','Price' )
 
 
-admin.site.register(Inventory, InventoryAdmin)
+admin.site.register(Inventar)
+admin.site.register(Projekt)
 
 
 
-class ProjectAdmin(admin.ModelAdmin):
+class EquipmentsInline(admin.TabularInline):
+    model= Equipments
 
-    list_display = ('Project', 'Project_Description','Date_ProjectEntry', 'Date_SignOff', 'Mietwochen', 'Status')
-    #list_filter = ('Status', )
+class GeruestbuchAdmin(admin.ModelAdmin):
+    inlines= [
+              EquipmentsInline,
+              ]
 
+    list_display= ('Projekt', 'Mietwochen', 'Status', 'Preis')
+    raw_id_fields= ('Projekt', )
+    list_filter= ('Projekt', )
 
-admin.site.register(Project, ProjectAdmin)
-
-#admin.site.register(Billing)
+admin.site.register(Geruestbuch, GeruestbuchAdmin)
