@@ -6,11 +6,11 @@
 		<p class="card-text">
 			<form>
 			  <div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anforderer. zB Christoph Lehnertz">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anforderer. zB Christoph Lehnertz">
 				<small id="emailHelp" class="form-text text-muted">Name der Person, welche das Gerüst anfordert.</small>
 			  </div>
 			  <div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Gerüstnummer">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Gerüstnummer">
 				<small id="emailHelp" class="form-text text-muted">Die Gerüstnummer wird automatisch ermittelt.</small>
 			  </div>
 			  <div class="form-group">
@@ -18,23 +18,23 @@
 				<small id="emailHelp" class="form-text text-muted">Firma auswählen, welche das Gerüst anfordert.</small>
 			  </div>
 			  <div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ansprechpartner">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ansprechpartner">
 				<small id="emailHelp" class="form-text text-muted">Ansprechpartner für die Bestellung in der Firma.</small>
 			  </div>
 			  <div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anlage/Equipment">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anlage/Equipment">
 				<small id="emailHelp" class="form-text text-muted">Anlagenarten wie xy.</small>
 			  </div>
 			  <div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ebene">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ebene">
 				<small id="emailHelp" class="form-text text-muted">Eben in m oder Ebenennummer eingeben.</small>
 			  </div>
 			  <div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Örtlichkeit">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Örtlichkeit">
 				<small id="emailHelp" class="form-text text-muted">Koordinaten wie beispielsweise A12.</small>
 			  </div>
 			  <div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Grund">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Grund">
 				<small id="emailHelp" class="form-text text-muted">Kurze Begründung warum das Gerüst angefordert wird.</small>
 			  </div>
 			  <div class="form-group">
