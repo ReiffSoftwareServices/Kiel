@@ -9,7 +9,7 @@
     
     
 
-    <title>Kiel - Industrial Services AG</title>
+    <title>Rohrer Group - Industrieservices komplett & kompetent aus einer Hand</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'geruestproject/css/bootstrap.css' %}" rel="stylesheet">
