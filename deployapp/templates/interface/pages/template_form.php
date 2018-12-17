@@ -7,17 +7,17 @@
 			<form>
 			  <div class="form-group">
 				<label for="exampleInputEmail1">Beispiel 1</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Beispieltext">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Beispieltext">
 				<small id="emailHelp" class="form-text text-muted">Hier steht eine kurze Erkl&auml;rung.</small>
 			  </div>
 			  <div class="form-group">
 				<label for="exampleInputEmail1">Beispiel 2</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Beispieltext">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Beispieltext">
 				<small id="emailHelp" class="form-text text-muted">Hier steht eine kurze Erkl&auml;rung.</small>
 			  </div>
 			  <div class="form-group">
 				<label for="exampleInputEmail1">Beispiel 3</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Beispieltext">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Beispieltext">
 				<small id="emailHelp" class="form-text text-muted">Hier steht eine kurze Erkl&auml;rung.</small>
 			  </div>
 			  <button type="submit" class="btn btn-secondary">Speichern</button>

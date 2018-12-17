@@ -46,7 +46,7 @@
 						<!--<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-time-tracking" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-stopwatch"></i> Zeiterfassung</a>-->
 						<!-- <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-data-view" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Datenansicht</a> -->
 						<div class="dropdown-divider"></div>
-						<a class="nav-link" href="https://kielindustrialjan.herokuapp.com/admin/geruestproject/project/" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Gerüstbuch</a>
+						<a class="nav-link" href="http://mysterious-depths-36429.herokuapp.com/admin/login/?next=/admin/" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Gerüstbuch</a>
 						<!--<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-dashboard-view" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-chart-line"></i> Dashboard</a>-->
 				</div>
 	</div>
