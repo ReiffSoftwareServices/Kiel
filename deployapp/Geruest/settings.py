@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8-+4t(=rjn50(97q9n&=4tv2var^pg^g!s#4bm(x_lbfqa05)@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['kielindustrialjan.herokuapp.com','localhost','127.0.0.1','mysterious-depths-36429.herokuapp.com']
@@ -89,12 +89,11 @@ DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd48omkoqbdtpau', #
-        'USER': 'qlqltwuoijbmhk', #
-        'PASSWORD': 'b321da90dbe63475a5210790cb755511bc72316d60941af9a9dc4c1d29510993', #
-        'HOST': 'ec2-54-225-200-15.compute-1.amazonaws.com', #
-        'PORT': '5432', #
-
+        'NAME': 'd3aqj0ded6ngs', # Database
+        'USER': 'dwoakbgpwlvcve', # User
+        'PASSWORD': 'da0a370afbee9570693fd42f0f8fa0c5d13cb6cb9911d2191bb7d46bbecf5554', # Password
+        'HOST': 'ec2-54-225-100-12.compute-1.amazonaws.com', # Host
+        'PORT': '5432', # Port
     }
 }
 
