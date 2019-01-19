@@ -42,7 +42,7 @@
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-enhance-scaffold" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-expand-arrows-alt"></i> Gerüst-Erweiterung</a>
 						<div class="dropdown-divider"></div>
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-measurement-control" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-check"></i> Aufmaßkontrolle</a>
-						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-account-control" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-clipboard-check"></i> Rechnungskontrolle</a>
+						<!--<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-account-control" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-clipboard-check"></i> Rechnungskontrolle</a>-->
 						<!--<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-time-tracking" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-stopwatch"></i> Zeiterfassung</a>-->
 						<!-- <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-data-view" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Datenansicht</a> -->
 						<div class="dropdown-divider"></div>

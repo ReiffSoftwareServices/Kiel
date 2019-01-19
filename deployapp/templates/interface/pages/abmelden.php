@@ -6,7 +6,11 @@
 		<p class="card-text">
 			<form>
 			  <div class="form-group">
-				<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Gerüstnummer auswählen...</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+				<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Gerüstnummer auswählen...</option>
+				{% for g in geruestnummer_liste %}
+				<option>{{ g.Geruestnummer }}</option>
+				{% endfor %}
+				</select>
 				<small id="emailHelp" class="form-text text-muted">Gerüst welches abgemeldet werden soll.</small>
 			  </div>
 			  <div class="form-group">
@@ -14,8 +18,8 @@
 				<small id="emailHelp" class="form-text text-muted">Name der Person welche das Gerüst abmeldet.</small>
 			  </div>
 			  <div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Abmeldedatum">
-				<small id="emailHelp" class="form-text text-muted">Datum zu welchem das Gerüst abgemeldet werden soll.</small>
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ heute }}" readonly>
+				<small id="emailHelp" class="form-text text-muted">Datum zu welchem das Gerüst abgemeldet wird.</small>
 			  </div>
 			  <button type="submit" class="btn btn-secondary">Gerüst abmelden</button>
 			</form>	

@@ -3,9 +3,6 @@ from django.contrib import admin
 # Register your models here.
 
 from .models import Client, Inventar, Projekt, Geruestbuch, Equipments
-
-
-
 class ClientAdmin(admin.ModelAdmin):
 
     list_display = ('Company_Name', 'Contact_LastName')
@@ -34,8 +31,7 @@ class GeruestbuchAdmin(admin.ModelAdmin):
     inlines= [
               EquipmentsInline,
               ]
-
-    list_display= ('Projekt', 'Mietwochen', 'Status', 'Preis')
+    list_display= ('Geruestnummer', )
     raw_id_fields= ('Projekt', )
     list_filter= ('Projekt', )
 
