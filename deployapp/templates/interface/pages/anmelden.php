@@ -5,14 +5,14 @@
 		<h6 class="card-subtitle mb-2 text-muted">Anmeldung eines neuen Gerüstes.</h6>
 		<p class="card-text">
 			<form action="{% url 'save_anmeldung' %}" method="post">
-				{% csrf_token %}
-			  <div class="form-group">
-				<input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Name der Person, welche das Gerüst anfordert." name="Anforderer">
-				<small id="emailHelp" class="form-text text-muted">Anforderer</small>
-			  </div>
+				{% csrf_token %}			  
 			  <div class="form-group" >
 				<input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Gerüstnummer" name="NeueGeruestnummer" value="{{ new_scaffold_number }}" readonly>
 				<small id="emailHelp" class="form-text text-muted">Gerüstnummer</small>
+			  </div>
+			  <div class="form-group">
+				<input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Name der Person, welche das Gerüst anfordert." name="Anforderer">
+				<small id="emailHelp" class="form-text text-muted">Anforderer</small>
 			  </div>
 			  <div class="form-group">
 				<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name" name="firmenauswahl">	
