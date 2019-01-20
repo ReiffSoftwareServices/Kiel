@@ -5,14 +5,6 @@
 		<h6 class="card-subtitle mb-2 text-muted">Umbau eines bestehendes Gerüstes.</h6>
 		<p class="card-text">
 			<form>
-				<div class="btn-group btn-group-toggle" data-toggle="buttons">
-				  <label class="btn btn-secondary active">
-					<input type="radio" name="options" id="option1" autocomplete="off" checked>Mit Material
-				  </label>
-				  <label class="btn btn-secondary">
-					<input type="radio" name="options" id="option2" autocomplete="off"> Ohne Material
-				  </label>
-				</div>
 				<div class="form-group">
 					<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Gerüstnummer auswählen...</option>
 					{% for g in geruestnummer_liste %}
@@ -21,6 +13,15 @@
 					</select>
 					<small id="emailHelp" class="form-text text-muted">Gerüst welches abgemeldet werden soll.</small>
 				</div>
+				<div class="btn-group btn-group-toggle" data-toggle="buttons">
+				  <label class="btn btn-secondary active">
+					<input type="radio" name="options" id="option1" autocomplete="off" checked>Mit Material
+				  </label>
+				  <label class="btn btn-secondary">
+					<input type="radio" name="options" id="option2" autocomplete="off"> Ohne Material
+				  </label>
+				</div>
+				
 				
 				<div class="form-group">
 					<button type="submit" class="btn btn-secondary">Umbau anmelden</button>

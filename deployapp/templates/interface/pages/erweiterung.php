@@ -21,11 +21,7 @@
 				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Abmelder">
 				<small id="emailHelp" class="form-text text-muted">Name der Person welche das Gerüst abmeldet.</small>
 			  </div>
-			  <div class="form-group">
-				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="TT.MM.JJJJ" title="Abmeldedatum"/>				
-				<small id="emailHelp" class="form-text text-muted">Datum zu welchem das Gerüst abgemeldet werden soll.</small>
-			  </div>
-			  <button type="submit" class="btn btn-secondary">Gerüst abmelden</button>
+			  <button type="submit" class="btn btn-secondary">Gerüsterweiterung anmelden</button>
 			</form>	
 		</p>
 	  </div>
