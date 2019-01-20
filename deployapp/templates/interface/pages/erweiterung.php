@@ -5,12 +5,16 @@
 		<h6 class="card-subtitle mb-2 text-muted">Abmeldung eines Gerüstes.</h6>
 		<p class="card-text">
 			<form>
+				<div class="form-group">
+					<select class="form-control" id="ScaffoldNumber" placeholder="Firma Name" onchange="changeScaffold()"><option>Gerüstnummer auswählen...</option>
+						{% for g in geruestnummer_liste %}
+						<option>{{ g.Geruestnummer }}</option>
+						{% endfor %}
+					</select>
+					<small id="emailHelp" class="form-text text-muted">Gerüst welches abgemeldet werden soll.</small>
+				</div>
 			  <div class="form-group">
-				<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Gerüstnummer auswählen...</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
-				<small id="emailHelp" class="form-text text-muted">Nummer des Gerüstes, welches abgemeldet werden soll.</small>
-			  </div>
-			  <div class="form-group">
-				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1.1">
+				<input type="text" class="form-control" id="subScaffold" aria-describedby="emailHelp" placeholder="1.1">
 				<small id="emailHelp" class="form-text text-muted">Erweiterungsnummer.</small>
 			  </div>
 			  <div class="form-group">

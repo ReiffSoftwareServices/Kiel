@@ -5,7 +5,6 @@ import random, string
 import numpy as np
 
 class Client(models.Model):
-
     #Company
     Company_Name   = models.CharField(max_length = 50, blank = True, verbose_name = 'Firma')
     Company_Email = models.EmailField(max_length = 254, blank= True, verbose_name = 'Firma Email')
@@ -21,7 +20,7 @@ class Client(models.Model):
     Contact_Phone = models.CharField(max_length = 20, blank = True, verbose_name = 'Telefon Ansprechpartner')
 
     class Meta:
-        verbose_name_plural = 'Kunden'
+        verbose_name_plural = 'Firmen'
 
     def __str__(self):
         return  '{} {}'.format(self.Company_Name, self.Contact_LastName)
@@ -115,28 +114,6 @@ class Equipments(models.Model):
 
     class Meta:
         verbose_name_plural= 'Equipment'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Don't delete!
