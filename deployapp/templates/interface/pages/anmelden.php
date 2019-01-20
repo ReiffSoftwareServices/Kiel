@@ -42,21 +42,20 @@
 				<input type="text" class="form-control" id="exampleInputEmailX" aria-describedby="emailHelp" placeholder="Grund" name="Grund">
 				<small id="emailHelp" class="form-text text-muted">Kurze Begründung warum das Gerüst angefordert wird.</small>
 			  </div>
-			  <div class="form-group">
-				
+			  <div class="form-group">				
 				<div class="input-group">
-					<input type="text" class="form-control" placeholder="L" name="L" required>
-					<input type="text" class="form-control" placeholder="B" name="B" required>
-					<input type="text" class="form-control" placeholder="H" name="H" required>
+					<input id="inputL" type="text" class="form-control" placeholder="L" name="L" required onchange="changeMeasurement()" title="Länge in qm">
+					<input id="inputB" type="text" class="form-control" placeholder="B" name="B" required onchange="changeMeasurement()" title="Breite in qm">
+					<input id="inputH" type="text" class="form-control" placeholder="H" name="H" required onchange="changeMeasurement()" title="Höhe in qm">
 				</div>
-				<small id="emailHelp" class="form-text text-muted">Maße des Gerüstes.</small>
+				<small id="labelMeasurement" class="form-text text-muted">Maße des Gerüstes.</small>
 			  </div>
 			  <div class="form-group">
 				<div class="input-group">
-						<input type="text" class="form-control" placeholder="{{ heute }}">
-						<input type="text" class="form-control" placeholder="Nutzungsbeginn" name="Nutzungsbeginn">
+						<input type="text" class="form-control" placeholder="{{ heute }}" title="Anmeldedatum: Datum von heute" readonly>
+						<input type="text" class="form-control" placeholder="TT.MM.JJJJ" name="Nutzungsbeginn" title="Nutzungsbeginn">
 				</div>
-				<small id="emailHelp" class="form-text text-muted">Zeitrum in dem das Gerüst genutzt wird.</small>
+				<small id="emailHelp" class="form-text text-muted">Anmeldedatum und Nutzungbeginn.</small>
 			  </div>
 			  <button type="submit" class="btn btn-secondary">Gerüst anmelden</button>
 			</form>	

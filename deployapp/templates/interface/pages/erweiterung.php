@@ -14,7 +14,7 @@
 					<small id="emailHelp" class="form-text text-muted">Gerüst welches abgemeldet werden soll.</small>
 				</div>
 			  <div class="form-group">
-				<input type="text" class="form-control" id="subScaffold" aria-describedby="emailHelp" placeholder="1.1">
+				<input type="text" class="form-control" id="subScaffold" aria-describedby="emailHelp" placeholder="1.1" readonly>
 				<small id="emailHelp" class="form-text text-muted">Erweiterungsnummer.</small>
 			  </div>
 			  <div class="form-group">
@@ -22,7 +22,7 @@
 				<small id="emailHelp" class="form-text text-muted">Name der Person welche das Gerüst abmeldet.</small>
 			  </div>
 			  <div class="form-group">
-				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Abmeldedatum">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="TT.MM.JJJJ" title="Abmeldedatum"/>				
 				<small id="emailHelp" class="form-text text-muted">Datum zu welchem das Gerüst abgemeldet werden soll.</small>
 			  </div>
 			  <button type="submit" class="btn btn-secondary">Gerüst abmelden</button>

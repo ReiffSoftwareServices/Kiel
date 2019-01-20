@@ -6,7 +6,11 @@
 		<p class="card-text">
 			<form>
 			  <div class="form-group">
-				<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Gerüstnummer auswählen...</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+				<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Gerüstnummer auswählen...</option>
+				{% for g in geruestnummer_liste %}
+				<option>{{ g.Geruestnummer }}</option>
+				{% endfor %}
+				</select>
 				<small id="emailHelp" class="form-text text-muted">Gerüst für das die Aufmaßkontrolle erfolgt.</small>
 			  </div>
 			  <div class="form-group">

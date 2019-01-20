@@ -14,11 +14,11 @@
 				<small id="emailHelp" class="form-text text-muted">Gerüst welches abgemeldet werden soll.</small>
 			  </div>
 			  <div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Abmelder">
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Abmelder">
 				<small id="emailHelp" class="form-text text-muted">Name der Person welche das Gerüst abmeldet.</small>
 			  </div>
 			  <div class="form-group">
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ heute }}" readonly>
+				<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ heute }}" title="Abmeldedatum: Datum von heute." readonly>
 				<small id="emailHelp" class="form-text text-muted">Datum zu welchem das Gerüst abgemeldet wird.</small>
 			  </div>
 			  <button type="submit" class="btn btn-secondary">Gerüst abmelden</button>
