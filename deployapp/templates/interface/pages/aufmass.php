@@ -23,7 +23,11 @@
 			  </div>
 			  <div class="form-group">
 				<div class="input-group">
-				<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Position aus LV wählen...</option><option>m³ Raumgerüst 2 kN/m²   LK 3</option><option>m³ Raumgerüst 2 kN/m²  LK 3 Miete</option><option>m³ Raumgerüst 3 kN/m²   LK 4</option><option>...</option></select>
+				<select class="form-control" id="exampleFormControlSelect1" placeholder="Leistungsposition...">
+				{% for inventar in leistungsverzeichnis %}
+				<option>{{ inventar }}</option>
+				{% endfor %}
+				</select>
 				</div>
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="L">
@@ -51,7 +55,11 @@
 			  </div>
 			  <div class="form-group">
 				<div class="input-group">
-				<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Position aus LV wählen...</option><option>m³ Raumgerüst 2 kN/m²   LK 3</option><option>m³ Raumgerüst 2 kN/m²  LK 3 Miete</option><option>m³ Raumgerüst 3 kN/m²   LK 4</option><option>...</option></select>
+				<select class="form-control" id="exampleFormControlSelect1" placeholder="Leistungsposition...">
+				{% for inventar in leistungsverzeichnis %}
+				<option>{{ inventar }}</option>
+				{% endfor %}
+				</select>
 				</div>
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="L">

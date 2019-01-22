@@ -62,8 +62,9 @@ class Projekt(models.Model):
 
 class Geruestbuch(models.Model):
 	Projekt = models.ForeignKey(Projekt, on_delete= 'PROTECT', verbose_name= 'Projekt')
+	Geruestbezeichner = models.CharField(max_length= 50, blank= True, verbose_name = 'Gerüstbezeichner')
 	Geruestnummer = models.DecimalField(max_digits= 12, decimal_places= 1, verbose_name = 'Gerüstnummer')
-	Anforderer = models.CharField(max_length= 50, blank= True, verbose_name = 'Anforderer')
+	Anforderer = models.CharField(max_length= 50, blank= True, verbose_name = 'PU-Manager')
 	Firma = models.ForeignKey(Client, on_delete= 'PROTECT', verbose_name = 'Firma')
 	Ansprechpartner = models.CharField(max_length= 50, blank= True, verbose_name = 'Ansprechpartner')
 	AnlageEquipment = models.CharField(max_length= 50, blank= True, verbose_name = 'Anlage / Equipment')
@@ -77,15 +78,11 @@ class Geruestbuch(models.Model):
 	Nutzungsbeginn = models.CharField(max_length= 50, blank= True, verbose_name= 'Nutzungsbeginn')
 	Abmeldedatum = models.DateField(blank = True, null = True, verbose_name= 'Abmeldedatum')
 	
-
-
-	
-
 	class Meta:
 		verbose_name_plural= 'Gerüste'
 
 	def __str__(self):
-		return '{}'.format(self.Projekt)
+		return '{}'.format(self.Geruestbezeichner)
 
 
 

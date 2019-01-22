@@ -10,8 +10,8 @@ def index(request):
 	if Geruestbuch.objects.all().count() < 1:
 		new_scaffold_number = 1
 	else:
-		new_scaffold_number = Geruestbuch.objects.all().aggregate(Max('Geruestnummer'))  #check
-		new_scaffold_number = int(new_scaffold_number["Geruestnummer__max"] + 1)
+		new_scaffold_number = Geruestbuch.objects.all().aggregate(Max('Geruestbezeichner'))  #check
+		new_scaffold_number = int(new_scaffold_number["Geruestbezeichner__max"]) + 1
 	firmen_list = Client.objects.order_by('id')[:100]
 	print(firmen_list)
 	#Nutzungsbeginn
@@ -38,8 +38,10 @@ def test_form(request):
 def save_anmeldung(request):
 	e = Client.objects.get(Company_Name=request.POST['firmenauswahl'])
 	p = Projekt.objects.get(Project_Name="Projekt 1")
+	x = int(request.POST['NeueGeruestnummer'])
+	print(x)
 	q = Geruestbuch(\
-	Projekt=p, Anforderer = request.POST['Anforderer'], Geruestnummer = request.POST['NeueGeruestnummer'], Firma = e, Ansprechpartner = request.POST['Ansprechpartner'], AnlageEquipment = request.POST['AnlageEquipment'], Ebene = request.POST['Ebene'], Oertlichkeit = request.POST['Oertlichkeit'], Grund = request.POST['Grund'],L = request.POST['L'], B= request.POST['B'], H = request.POST['H'], Nutzungsbeginn = request.POST['Nutzungsbeginn'] )
+	Projekt=p, Anforderer = request.POST['Anforderer'], Geruestnummer = request.POST['NeueGeruestnummer'], Geruestbezeichner = x, Firma = e, Ansprechpartner = request.POST['Ansprechpartner'], AnlageEquipment = request.POST['AnlageEquipment'], Ebene = request.POST['Ebene'], Oertlichkeit = request.POST['Oertlichkeit'], Grund = request.POST['Grund'],L = request.POST['L'], B= request.POST['B'], H = request.POST['H'], Nutzungsbeginn = request.POST['Nutzungsbeginn'] )
 	q.save()
 	wert = 'Gerüst erfolgreich angemeldet'
 	return render(request, 'interface/pages/success.php', {'wert': wert})

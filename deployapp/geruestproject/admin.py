@@ -31,7 +31,7 @@ class GeruestbuchAdmin(admin.ModelAdmin):
     inlines= [
               EquipmentsInline,
               ]
-    list_display= ('Geruestnummer', )
+    list_display= ('Geruestbezeichner', 'Anforderer', 'Firma', 'Ansprechpartner', 'AnlageEquipment', 'Ebene', 'Oertlichkeit', 'Grund', 'Anmeldedatum', 'Nutzungsbeginn', 'Abmeldedatum', )
     raw_id_fields= ('Projekt', )
     list_filter= ('Projekt', )
 
