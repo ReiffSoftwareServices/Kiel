@@ -11,15 +11,22 @@
 					<option>{{ g.Geruestnummer }}</option>
 					{% endfor %}
 					</select>
-					<small id="emailHelp" class="form-text text-muted">Gerüst welches abgemeldet werden soll.</small>
+					<small id="emailHelp" class="form-text text-muted">Gerüst welches umgebaut werden soll.</small>
 				</div>
-				<div class="btn-group btn-group-toggle" data-toggle="buttons">
-				  <label class="btn btn-secondary active">
-					<input type="radio" name="options" id="option1" autocomplete="off" checked>Mit Material
-				  </label>
-				  <label class="btn btn-secondary">
-					<input type="radio" name="options" id="option2" autocomplete="off"> Ohne Material
-				  </label>
+				<div class="form-group">
+					<input type="text" class="form-control" id="subScaffold" aria-describedby="emailHelp" placeholder="1.1" readonly>
+					<small id="emailHelp" class="form-text text-muted">Erweiterungsnummer.</small>
+				</div>
+				<div class="form-group">
+					<div class="btn-group btn-group-toggle" data-toggle="buttons">
+					  <label class="btn btn-secondary active">
+						<input type="radio" name="options" id="option1" autocomplete="off" checked>Mit Material
+					  </label>
+					  <label class="btn btn-secondary">
+						<input type="radio" name="options" id="option2" autocomplete="off"> Ohne Material
+					  </label>				  
+					</div>
+					<small id="emailHelp" class="form-text text-muted">Mit oder ohne Material.</small>
 				</div>
 				
 				

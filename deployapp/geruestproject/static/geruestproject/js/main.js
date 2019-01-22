@@ -11,9 +11,9 @@ function changeMeasurement(){
 	var inputBValue = document.getElementById("inputB").value
 	var inputHValue = document.getElementById("inputH").value
 	if (isNaN(inputLValue) || isNaN(inputBValue) || isNaN(inputHValue) || inputLValue==""||inputBValue=="" ||inputHValue=="") {
-		document.getElementById("labelMeasurement").innerHTML = "Maße des Gerüstes eingeben in m."
+		document.getElementById("labelMeasurement").innerHTML = "Anmeldekubatur"
 	} else {
-		document.getElementById("labelMeasurement").innerHTML = "Kubatur: " + inputLValue*inputBValue*inputHValue + " qm"
+		document.getElementById("labelMeasurement").innerHTML = "Anmeldekubatur ( " + Math.round(inputLValue*inputBValue*inputHValue*100, 2)/100 + "m<sup>3</sup> )"
 	}
 	
 }

@@ -12,7 +12,7 @@
 			  </div>
 			  <div class="form-group">
 				<input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Name der Person, welche das Gerüst anfordert." name="Anforderer">
-				<small id="emailHelp" class="form-text text-muted">PO-Manager</small>
+				<small id="emailHelp" class="form-text text-muted">PU-Manager</small>
 			  </div>
 			  <div class="form-group">
 				<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name" name="firmenauswahl">	
@@ -48,7 +48,7 @@
 					<input id="inputB" type="text" class="form-control" placeholder="B" name="B" required onchange="changeMeasurement()" title="Breite in qm">
 					<input id="inputH" type="text" class="form-control" placeholder="H" name="H" required onchange="changeMeasurement()" title="Höhe in qm">
 				</div>
-				<small id="labelMeasurement" class="form-text text-muted">Maße des Gerüstes.</small>
+				<small id="labelMeasurement" class="form-text text-muted">Anmeldekubatur</small>
 			  </div>
 			  <div class="form-group">
 				<div class="input-group">

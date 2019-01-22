@@ -9,7 +9,7 @@
     
     
 
-    <title>test läuft</title>
+    <title>Daten gespeichert</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'geruestproject/css/bootstrap.css' %}" rel="stylesheet">
@@ -28,7 +28,20 @@
 				
 		</head>
 <body>
-	{{ wert }}
+	<div class="container mt-4">
+	<div class="card">
+	  <div class="card-body">
+		<h5 class="card-title">Daten gespeichert</h5>
+		<h6 class="card-subtitle mb-2 text-muted">{{ wert }}</h6>
+		<p class="card-text">
+		<form action="{% url 'index' %}"">
+			<input type="submit" class="btn btn-secondary" value="Ok" />
+		</form>
+		</p>
+	  </div>
+	</div>
+</div>
+	
 
 
 				

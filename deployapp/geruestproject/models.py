@@ -23,28 +23,28 @@ class Client(models.Model):
         verbose_name_plural = 'Firmen'
 
     def __str__(self):
-        return  '{} {}'.format(self.Company_Name, self.Contact_LastName)
+        return  '{}'.format(self.Company_Name)
 
 
 
 class Inventar(models.Model):
+	Leistungsposition = models.DecimalField(max_digits = 7, decimal_places = 2, blank = True, null = True, verbose_name= 'LV Positionsnummer')
+	Name = models.CharField(max_length = 50, verbose_name= 'LV Positionsname')
+	Einheit= models.CharField(max_length= 50, verbose_name= 'Einheit')
+	Beschreibung = models.TextField(blank = True, verbose_name = 'Beschreibung')
+	Preis = models.DecimalField(max_digits = 7, decimal_places = 2, blank = True, null = True, verbose_name= 'Preis') ## Not sure whether they can be zero!
 
-    Name = models.CharField(max_length = 50, verbose_name= 'Bauteil')
-    Einheit= models.CharField(max_length= 50, verbose_name= 'Einheit')
-    Beschreibung = models.TextField(blank = True, verbose_name = 'Beschreibung')
-    Preis = models.DecimalField(max_digits = 7, decimal_places = 2, blank = True, null = True, verbose_name= 'Preis') ## Not sure whether they can be zero!
-
-    # Miete
-    Einheit_Miete= models.CharField(max_length= 50, verbose_name= 'Einheit Miete')
-    Beschreibung_Miete= models.CharField(max_length= 50, verbose_name= 'Beschreibung Miete')
-    Preis_Miete= models.DecimalField(max_digits= 7, decimal_places= 2, blank= True, null= True, verbose_name= 'Preis Miete')
+	# Miete
+	Einheit_Miete= models.CharField(max_length= 50, verbose_name= 'Einheit Miete')
+	Beschreibung_Miete= models.CharField(max_length= 50, verbose_name= 'Beschreibung Miete')
+	Preis_Miete= models.DecimalField(max_digits= 7, decimal_places= 2, blank= True, null= True, verbose_name= 'Preis Miete')
 
 
-    class Meta:
-        verbose_name_plural = 'Leistungsverzeichnis'
+	class Meta:
+		verbose_name_plural = 'Leistungsverzeichnis'
 
-    def __str__(self):
-        return '{}'.format(self.Name)
+	def __str__(self):
+		return '{}'.format(self.Name)
 
 
 class Projekt(models.Model):
