@@ -25,5 +25,6 @@ urlpatterns = [
 	path ('input',views.test_form, name="test_form"),
     path(r'admin/', admin.site.urls),
 	path ('save_anmeldung',views.save_anmeldung, name="save_anmeldung"),
+	path ('save_abmeldung',views.save_abmeldung, name="save_abmeldung"),
     #url(r'^', include('books.urls'))
 ]

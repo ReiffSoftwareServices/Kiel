@@ -63,7 +63,7 @@ class Projekt(models.Model):
 class Geruestbuch(models.Model):
 	Projekt = models.ForeignKey(Projekt, on_delete= 'PROTECT', verbose_name= 'Projekt')
 	Geruestbezeichner = models.CharField(max_length= 50, blank= True, verbose_name = 'Gerüstbezeichner')
-	Geruestnummer = models.DecimalField(max_digits= 12, decimal_places= 1, verbose_name = 'Gerüstnummer')
+	Status = models.CharField(max_length= 50, blank= True, null = True, verbose_name = 'Status')
 	Anforderer = models.CharField(max_length= 50, blank= True, verbose_name = 'PU-Manager')
 	Firma = models.ForeignKey(Client, on_delete= 'PROTECT', verbose_name = 'Firma')
 	Ansprechpartner = models.CharField(max_length= 50, blank= True, verbose_name = 'Ansprechpartner')
@@ -73,10 +73,11 @@ class Geruestbuch(models.Model):
 	Grund = models.CharField(max_length= 50, blank= True, verbose_name = 'Grund')
 	L = models.DecimalField(max_digits= 12, decimal_places= 2, blank= True, null = True, verbose_name = 'Länge')
 	B = models.DecimalField(max_digits= 12, decimal_places= 2, blank= True, null = True, verbose_name = 'Breite')
-	H = models.DecimalField(max_digits= 12, decimal_places= 2, blank= True, verbose_name = 'Höhe')
+	H = models.DecimalField(max_digits= 12, decimal_places= 2, blank= True, null = True, verbose_name = 'Höhe')
 	Anmeldedatum = models.DateField(default = date.today(), verbose_name= 'Anmeldedatum')
 	Nutzungsbeginn = models.CharField(max_length= 50, blank= True, verbose_name= 'Nutzungsbeginn')
-	Abmeldedatum = models.DateField(blank = True, null = True, verbose_name= 'Abmeldedatum')
+	Abmelder = models.CharField(max_length= 50, blank= True, verbose_name = 'Abmelder')
+	Abmeldedatum = models.CharField(max_length= 10, blank= True, null = True, verbose_name = 'Abmeldedatum')
 	
 	class Meta:
 		verbose_name_plural= 'Gerüste'

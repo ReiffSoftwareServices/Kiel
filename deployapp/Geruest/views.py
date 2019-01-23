@@ -17,7 +17,7 @@ def index(request):
 	#Nutzungsbeginn
 	heute = date.today().strftime('%d.%m.%Y')
 # GERÜSTABMELDUNG #
-	geruestnummer_liste = Geruestbuch.objects.order_by('id')[:200]
+	geruestnummer_liste = Geruestbuch.objects.order_by('id')[:100]
 	print(geruestnummer_liste)
 # AUFMASSKONTROLLE #
 	leistungsverzeichnis = Inventar.objects.order_by('id')[:200]
@@ -41,18 +41,20 @@ def save_anmeldung(request):
 	x = int(request.POST['NeueGeruestnummer'])
 	print(x)
 	q = Geruestbuch(\
-	Projekt=p, Anforderer = request.POST['Anforderer'], Geruestnummer = request.POST['NeueGeruestnummer'], Geruestbezeichner = x, Firma = e, Ansprechpartner = request.POST['Ansprechpartner'], AnlageEquipment = request.POST['AnlageEquipment'], Ebene = request.POST['Ebene'], Oertlichkeit = request.POST['Oertlichkeit'], Grund = request.POST['Grund'],L = request.POST['L'], B= request.POST['B'], H = request.POST['H'], Nutzungsbeginn = request.POST['Nutzungsbeginn'] )
+	Projekt=p, Anforderer = request.POST['Anforderer'], Geruestnummer = request.POST['NeueGeruestnummer'], Geruestbezeichner = x, Firma = e,Ansprechpartner = request.POST['Ansprechpartner'], AnlageEquipment = request.POST['AnlageEquipment'], Ebene = request.POST['Ebene'], Oertlichkeit = request.POST['Oertlichkeit'], Grund = request.POST['Grund'],L = request.POST['L'], B= request.POST['B'], H = request.POST['H'], Nutzungsbeginn = request.POST['Nutzungsbeginn'], Status = "Angemeldet" )
 	q.save()
 	wert = 'Gerüst erfolgreich angemeldet'
 	return render(request, 'interface/pages/success.php', {'wert': wert})
 	
 	
-def save_abmeldung(request):	
-	e = Client.objects.get(Company_Name=request.POST['firmenauswahl'])
-	p = Projekt.objects.get(Project_Name="Projekt 1")
-	q = Geruestbuch(\
-	Projekt=p, Anforderer = request.POST['Anforderer'], Geruestnummer = request.POST['NeueGeruestnummer'], Firma = e, Ansprechpartner = request.POST['Ansprechpartner'], AnlageEquipment = request.POST['AnlageEquipment'], Ebene = request.POST['Ebene'], Oertlichkeit = request.POST['Oertlichkeit'], Grund = request.POST['Grund'],L = request.POST['L'], B= request.POST['B'], H = request.POST['H'], Nutzungsbeginn = request.POST['Nutzungsbeginn'] )
-	q.save()
-	wert = request.POST['Anforderer']
-	wert = 'Gerüst erfolgreich angemeldet'
-	return render(request, 'interface/pages/success.php', {'wert': request.POST['firmenauswahl']})
+def save_abmeldung(request):
+	geruestnummer = request.POST['AbmeldungGeruestnummer']
+	abmelder = request.POST['Abmelder']
+	abmeldedatum = request.POST['Abmeldedatum']
+	t = Geruestbuch.objects.get(Geruestbezeichner=geruestnummer)
+	t.Abmeldedatum = abmeldedatum
+	t.Abmelder = abmelder
+	t.Status = "Abgemeldet"
+	t.save()
+	wert = 'Gerüst erfolgreich abgemeldet'
+	return render(request, 'interface/pages/success.php', {'wert': wert})

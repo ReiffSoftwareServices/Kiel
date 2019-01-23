@@ -6,15 +6,15 @@
 		<p class="card-text">
 			<form>
 				<div class="form-group">
-					<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name"><option>Gerüstnummer auswählen...</option>
+					<select class="form-control" id="UmbauScaffoldNumber" placeholder="Firma Name" onchange="changeScaffold()"><option>Gerüstnummer auswählen...</option>
 					{% for g in geruestnummer_liste %}
-					<option>{{ g.Geruestnummer }}</option>
+					<option>{{ g.Geruestbezeichner }}</option>
 					{% endfor %}
 					</select>
 					<small id="emailHelp" class="form-text text-muted">Gerüst welches umgebaut werden soll.</small>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" id="subScaffold" aria-describedby="emailHelp" placeholder="1.1" readonly>
+					<input type="text" class="form-control" id="UmbauSubScaffold" aria-describedby="emailHelp" placeholder="Bitte Hauptgerüst auswählen." readonly>
 					<small id="emailHelp" class="form-text text-muted">Erweiterungsnummer.</small>
 				</div>
 				<div class="form-group">
@@ -31,7 +31,7 @@
 				
 				
 				<div class="form-group">
-					<button type="submit" class="btn btn-secondary">Umbau anmelden</button>
+					<button type="submit" class="btn btn-secondary" disabled>Umbau anmelden</button>
 				</div>
 			  
 			</form>	
