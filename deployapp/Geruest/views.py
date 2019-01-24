@@ -44,7 +44,7 @@ def save_anmeldung(request):
 	x = int(request.POST['NeueGeruestnummer'])
 	print(x)
 	q = Geruestbuch(\
-	Projekt=p, Anforderer = request.POST['Anforderer'], Geruestnummer = request.POST['NeueGeruestnummer'], Geruestbezeichner = x, Firma = e,Ansprechpartner = request.POST['Ansprechpartner'], AnlageEquipment = request.POST['AnlageEquipment'], Ebene = request.POST['Ebene'], Oertlichkeit = request.POST['Oertlichkeit'], Grund = request.POST['Grund'],L = request.POST['L'], B= request.POST['B'], H = request.POST['H'], Nutzungsbeginn = request.POST['Nutzungsbeginn'], Status = "Angemeldet", Positionsart ="Hauptgerüst" )
+	Projekt=p, Anforderer = request.POST['Anforderer'], Geruestbezeichner = x, Firma = e,Ansprechpartner = request.POST['Ansprechpartner'], AnlageEquipment = request.POST['AnlageEquipment'], Ebene = request.POST['Ebene'], Oertlichkeit = request.POST['Oertlichkeit'], Grund = request.POST['Grund'],L = request.POST['L'], B= request.POST['B'], H = request.POST['H'], Nutzungsbeginn = request.POST['Nutzungsbeginn'], Status = "Angemeldet", Positionsart ="Hauptgerüst" )
 	q.save()
 	wert = 'Gerüst erfolgreich angemeldet'
 	return render(request, 'interface/pages/success.php', {'wert': wert})
