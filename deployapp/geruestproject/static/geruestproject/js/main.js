@@ -10,22 +10,36 @@ function changeScaffold(){
 	} else {
 	document.getElementById("UmbauSubScaffold").value = document.getElementById("UmbauScaffoldNumber").value.concat(".1")
 	}
+	
+}
+
+function AufmassChangeScaffold(){
+	if (Number.isNaN(parseInt(document.getElementById("AufmassScaffold").value))) {
+		document.getElementById("AufmassL").selectedIndex = "L";
+		document.getElementById("AufmassB").selectedIndex = "B";
+		document.getElementById("AufmassH").selectedIndex = "H";		
+	} else {
+		document.getElementById("AufmassL").selectedIndex = document.getElementById("AufmassScaffold").selectedIndex;
+		document.getElementById("AufmassB").selectedIndex = document.getElementById("AufmassScaffold").selectedIndex;
+		document.getElementById("AufmassH").selectedIndex = document.getElementById("AufmassScaffold").selectedIndex;
+	}
 }
 
 function changeInventar(){
 	document.getElementById("AufmassInventarPreis1").selectedIndex = document.getElementById("AufmassInventarDropdown1").selectedIndex;
-	document.getElementById("AufmassInventarPreis2").selectedIndex = document.getElementById("AufmassInventarDropdown2").selectedIndex;
-	document.getElementById("AufmassInventarPreis3").selectedIndex = document.getElementById("AufmassInventarDropdown3").selectedIndex;
 }
+
 function updateMeasurementCalculation(){
 	console.log("check")
-	
-	var value1 = document.getElementById("L1").value * document.getElementById("B1").value * document.getElementById("H1").value * document.getElementById("n1").value * document.getElementById("AufmassInventarPreis1").value
-	var value2 = document.getElementById("L2").value * document.getElementById("B2").value * document.getElementById("H2").value * document.getElementById("n2").value * document.getElementById("AufmassInventarPreis2").value
-	var value3 = document.getElementById("L3").value * document.getElementById("B3").value * document.getElementById("H3").value * document.getElementById("n3").value * document.getElementById("AufmassInventarPreis3").value
+	if (document.getElementById("AufmassInventarPreis1").selectedIndex == 1 || document.getElementById("AufmassInventarPreis1").selectedIndex == 2){
+		value1 = document.getElementById("AufmassInventarPreis1").value
+	} else if (document.getElementById("AufmassInventarPreis1").selectedIndex == 0){
+		value1 = "Aufmaß des Gerüstes."
+	}
+	else {
+		value1 = document.getElementById("L1").value * document.getElementById("B1").value * document.getElementById("H1").value * document.getElementById("n1").value * document.getElementById("AufmassInventarPreis1").value
+	}		
 	document.getElementById("label1").innerHTML = value1.toString().concat(" €")
-	document.getElementById("label2").innerHTML = value2.toString().concat(" €")
-	document.getElementById("label3").innerHTML = value3.toString().concat(" €")
 }
 
 function changeMeasurement(){

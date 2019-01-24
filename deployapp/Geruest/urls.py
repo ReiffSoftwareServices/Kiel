@@ -26,5 +26,6 @@ urlpatterns = [
     path(r'admin/', admin.site.urls),
 	path ('save_anmeldung',views.save_anmeldung, name="save_anmeldung"),
 	path ('save_abmeldung',views.save_abmeldung, name="save_abmeldung"),
+	path ('save_umbau',views.save_umbau, name="save_umbau"),	
     #url(r'^', include('books.urls'))
 ]

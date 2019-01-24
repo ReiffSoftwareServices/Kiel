@@ -4,9 +4,10 @@
 		<h5 class="card-title">Gerüst-Umbau</h5>
 		<h6 class="card-subtitle mb-2 text-muted">Umbau eines bestehendes Gerüstes.</h6>
 		<p class="card-text">
-			<form>
+			<form action="{% url 'save_umbau' %}" method="post">
+				{% csrf_token %}
 				<div class="form-group">
-					<select class="form-control" id="UmbauScaffoldNumber" placeholder="Firma Name" onchange="changeScaffold()"><option>Gerüstnummer auswählen...</option>
+					<select class="form-control" id="UmbauScaffoldNumber" placeholder="Firma Name" name="UmbauScaffoldNumber" onchange="changeScaffold()"><option>Gerüstnummer auswählen...</option>
 					{% for g in geruestnummer_liste %}
 					<option>{{ g.Geruestbezeichner }}</option>
 					{% endfor %}
@@ -14,7 +15,7 @@
 					<small id="emailHelp" class="form-text text-muted">Gerüst welches umgebaut werden soll.</small>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control" id="UmbauSubScaffold" aria-describedby="emailHelp" placeholder="Bitte Hauptgerüst auswählen." readonly>
+					<input type="text" class="form-control" id="UmbauSubScaffold" name="UmbauSubScaffold" aria-describedby="emailHelp" placeholder="Bitte Hauptgerüst auswählen." readonly>
 					<small id="emailHelp" class="form-text text-muted">Erweiterungsnummer.</small>
 				</div>
 				<div class="form-group">
@@ -23,7 +24,7 @@
 						<input type="radio" name="options" id="option1" autocomplete="off" checked>Mit Material
 					  </label>
 					  <label class="btn btn-secondary">
-						<input type="radio" name="options" id="option2" autocomplete="off"> Ohne Material
+						<input type="radio" name="options" id="option2" autocomplete="off">Ohne Material
 					  </label>				  
 					</div>
 					<small id="emailHelp" class="form-text text-muted">Mit oder ohne Material.</small>
@@ -31,7 +32,7 @@
 				
 				
 				<div class="form-group">
-					<button type="submit" class="btn btn-secondary" disabled>Umbau anmelden</button>
+					<button type="submit" class="btn btn-secondary">Umbau anmelden</button>
 				</div>
 			  
 			</form>	

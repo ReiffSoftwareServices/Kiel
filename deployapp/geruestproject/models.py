@@ -63,6 +63,8 @@ class Projekt(models.Model):
 class Geruestbuch(models.Model):
 	Projekt = models.ForeignKey(Projekt, on_delete= 'PROTECT', verbose_name= 'Projekt')
 	Geruestbezeichner = models.CharField(max_length= 50, blank= True, verbose_name = 'Gerüstbezeichner')
+	Positionsart = models.CharField(max_length= 50, blank= True, verbose_name = 'Positionsart')
+	InterneID = models.CharField(max_length= 50, blank= True, verbose_name = 'Shell Interne ID')
 	Status = models.CharField(max_length= 50, blank= True, null = True, verbose_name = 'Status')
 	Anforderer = models.CharField(max_length= 50, blank= True, verbose_name = 'PU-Manager')
 	Firma = models.ForeignKey(Client, on_delete= 'PROTECT', verbose_name = 'Firma')

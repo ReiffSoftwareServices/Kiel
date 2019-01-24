@@ -16,6 +16,7 @@
 			  </div>
 			  <div class="form-group">
 				<select class="form-control" id="exampleFormControlSelect1" placeholder="Firma Name" name="firmenauswahl">	
+				<option>Firma auswählen ...</option>
 				{% for firma in firmen_list %}
 				<option>{{ firma }}</option>
 				{% endfor %}

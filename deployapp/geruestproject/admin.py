@@ -28,11 +28,12 @@ class EquipmentsInline(admin.TabularInline):
     model= Equipments
 
 class GeruestbuchAdmin(admin.ModelAdmin):
-    inlines= [
-              EquipmentsInline,
-              ]
-    list_display= ('Geruestbezeichner', 'Status', 'Anforderer', 'Firma', 'Ansprechpartner', 'AnlageEquipment', 'Ebene', 'Oertlichkeit', 'Grund', 'Anmeldedatum', 'Nutzungsbeginn', 'Abmeldedatum', )
-    raw_id_fields= ('Projekt', )
-    list_filter= ('Projekt', )
+	ordering = ['id']
+	inlines= [
+			  EquipmentsInline,
+			  ]
+	list_display= ('Geruestbezeichner', 'Status', 'Anforderer', 'Firma', 'Ansprechpartner', 'AnlageEquipment', 'Ebene', 'Oertlichkeit', 'Grund', 'Anmeldedatum', 'Nutzungsbeginn', 'Abmeldedatum', )
+	raw_id_fields= ('Projekt', )
+	list_filter= ('Projekt', )
 
 admin.site.register(Geruestbuch, GeruestbuchAdmin)
