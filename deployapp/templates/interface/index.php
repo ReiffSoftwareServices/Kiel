@@ -33,7 +33,7 @@
 	
 	<div class="nav-side-bar col-md-3">
 
-		<div class="brand"><img class="mb-4 mt-4" src="{% static 'geruestproject/img/logo.png' %}" alt="" width="144" ></div>
+		<div class="brand"><img class="mb-4 mt-4" src="{% static 'geruestproject/img/rohrer-logo.png' %}" alt="" width="144" ></div>
 				<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 				        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#tab-planning-scaffold" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fas fa-calendar-alt"></i> Planung</a>
                         <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#tab-new-scaffold" role="tab" aria-controls="v-pills-home" aria-selected="false"><i class="fas fa-plus-circle"></i> Gerüst-Anmeldung</a>
@@ -48,8 +48,8 @@
 						<!--<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-time-tracking" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-stopwatch"></i> Zeiterfassung</a>-->
 						<!-- <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-data-view" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Datenansicht</a> -->
 						<div class="dropdown-divider"></div>
-						<a class="nav-link" href="https://kielindustrialjan.herokuapp.com/admin" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Gerüstbuch</a>
-						<!--<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-dashboard-view" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-chart-line"></i> Dashboard</a>-->
+						<a class="nav-link" href="https://rohrer.herokuapp.com/admin" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Gerüstbuch</a>
+						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-dashboard-view" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-chart-line"></i> Dashboard</a>
 				</div>
 	</div>
 			<div class="col-md-9 form-content">

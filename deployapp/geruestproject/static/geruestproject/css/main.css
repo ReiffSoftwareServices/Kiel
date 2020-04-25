@@ -1,5 +1,21 @@
-.form-control{
-	border:none;
-	background-color:#f1f1f1;
-	margin:1px;
+.form-control {
+	border: none;
+	background-color: rgba(13, 56, 128, 0.2);
+	color: #0D3880;
+	margin: 1
+}
+.form-control::placeholder{
+	color: rgba(255, 255, 255, 0.7);
+}
+
+body {
+	background-color: rgba(13, 56, 128, 0.2);
+	color: #0D3880;
+}
+
+.card-title h5{
+	color: #0D3880;
+}
+.btn-secondary {
+	background-color: #0D3880;
 }

@@ -10,14 +10,14 @@ html, body, .main-row{
 }
 
 .nav-side-bar{
-			background-color: #2e353d;
+			background-color: #white;
 			font-family: verdana;
 			font-size: 12px;
 			font-weight: 200;
 			
 }
 .nav-side-bar a{
-		color: #e1ffff;
+		color: #0D3880;
 	
 }
 .nav-side-bar ul li{
@@ -25,12 +25,12 @@ html, body, .main-row{
 }
 .nav-side-bar .nav-link.active{
 				border-left: 3px solid #e1ffff;
-    background-color: #4f5b69;
+    background-color: #0D3880;
 }
 @media (min-width: 767px) {
 	.nav-side-bar{
 				min-height: 250%;
-				background-color: #2e353d;
+				background-color: white;
 				font-family: verdana;
 				font-size: 12px;
 				font-weight: 200;
