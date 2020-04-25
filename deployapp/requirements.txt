@@ -7,9 +7,7 @@ html5lib==0.9999999
 Markdown==2.2.0
 numpy==1.13.0
 protobuf==3.3.0
-psycopg2==2.7.4
+psycopg2==2.8.5
 pytz==2018.4
-six==1.10.0
-tensorflow==1.2.0rc2
-Werkzeug==0.12.2
+six==1.14.0
 whitenoise==3.3.1
