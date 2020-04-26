@@ -6,4 +6,4 @@ from geruestproject.models import Geruestbuch
 class GeruestbuchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Geruestbuch
-        fields = ['Projekt', 'Geruestbezeichner']
+        fields = ['Projekt', 'Geruestbezeichner', 'Positionsart', 'InterneID', 'Status', 'Anforderer', 'Firma', 'Ansprechpartner', 'AnlageEquipment', 'Ebene', 'Oertlichkeit', 'Grund', 'L', 'B', 'H', 'Anmeldedatum', 'Nutzungsbeginn', 'Abmelder', 'Abmeldedatum']
