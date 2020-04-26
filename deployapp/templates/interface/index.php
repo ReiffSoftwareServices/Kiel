@@ -37,19 +37,14 @@
 				<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 				        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#tab-planning-scaffold" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fas fa-calendar-alt"></i> Planung</a>
                         <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#tab-new-scaffold" role="tab" aria-controls="v-pills-home" aria-selected="false"><i class="fas fa-plus-circle"></i> Gerüst-Anmeldung</a>
-						
-						<!--<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#tab-new-scaffold" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fas fa-plus-circle"></i> Gerüst-Anmeldung</a>-->
 						<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#tab-remove-scaffold" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fas fa-minus-circle"></i> Gerüst-Abmeldung</a>
 						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#tab-rebuild-scaffold" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-exchange-alt"></i> Gerüst-Umbau</a>
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-enhance-scaffold" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-expand-arrows-alt"></i> Gerüst-Erweiterung</a>
 						<div class="dropdown-divider"></div>
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-measurement-control" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-check"></i> Aufmaßkontrolle</a>
-						<!--<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-account-control" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-clipboard-check"></i> Rechnungskontrolle</a>-->
-						<!--<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-time-tracking" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-stopwatch"></i> Zeiterfassung</a>-->
-						<!-- <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-data-view" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Datenansicht</a> -->
-						<div class="dropdown-divider"></div>
+                        <div class="dropdown-divider"></div>
 						<a class="nav-link" href="https://rohrer.herokuapp.com/admin" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Gerüstbuch</a>
-						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-dashboard-view" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-chart-line"></i> Dashboard</a>
+						<a class="nav-link" href="https://reiff-angular.herokuapp.com/" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-chart-line"></i> Dashboard</a>
 				</div>
 	</div>
 			<div class="col-md-9 form-content">

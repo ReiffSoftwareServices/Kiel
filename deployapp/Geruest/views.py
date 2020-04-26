@@ -24,7 +24,30 @@ def index(request):
 	print(geruestnummer_liste)
 # AUFMASSKONTROLLE #
 	leistungsverzeichnis = Inventar.objects.order_by('id')[:200]
-	return render(request, 'interface/index.php', {'new_scaffold_number': new_scaffold_number, 'firmen_list' : firmen_list, 'heute' : heute, 'geruestnummer_liste' : geruestnummer_liste, 'leistungsverzeichnis': leistungsverzeichnis})
+# DASHBOARD
+	hourWidth = 12.5
+	barHeight = 75/5
+	dashboard_data = {
+		'svgHeight': 300,
+		'svgWidth': 100,
+		'svgColorBg': 'white',
+		'svgColorLine': 'blue',
+		'axe': [
+			{'x1': (1 - 1) * 100 / 8, 'x2': (1 - 1) * 100 / 8, 'y1': '100%', 'y2': '0%', 'color': 'red'},
+			{'x1': (2 - 1) * 100 / 8, 'x2': (2 - 1) * 100 / 8, 'y1': '100%', 'y2': '0%', 'color': 'red'},
+			{'x1': (3 - 1) * 100 / 8, 'x2': (3 - 1) * 100 / 8, 'y1': '100%', 'y2': '0%', 'color': 'red'},
+			{'x1': (4 - 1) * 100 / 8, 'x2': (4 - 1) * 100 / 8, 'y1': '100%', 'y2': '0%', 'color': 'red'},
+			{'x1': (5 - 1) * 100 / 8, 'x2': (5 - 1) * 100 / 8, 'y1': '100%', 'y2': '0%', 'color': 'red'},
+			{'x1': (6 - 1) * 100 / 8, 'x2': (6 - 1) * 100 / 8, 'y1': '100%', 'y2': '0%', 'color': 'red'},
+			{'x1': (7 - 1) * 100 / 8, 'x2': (7 - 1) * 100 / 8, 'y1': '100%', 'y2': '0%', 'color': 'red'},
+			{'x1': (8 - 1) * 100 / 8, 'x2': (8 - 1) * 100 / 8, 'y1': '100%', 'y2': '0%', 'color': 'red'}
+		],
+		'dataTransformed': [
+			{'x': hourWidth*2, 'y': '5%', 'width': '100', 'height': '100'},
+			{'x': '5%', 'y': '5%', 'width': '100', 'height': '100'}
+		]
+	}
+	return render(request, 'interface/index.php', {'new_scaffold_number': new_scaffold_number, 'firmen_list' : firmen_list, 'heute' : heute, 'geruestnummer_liste' : geruestnummer_liste, 'leistungsverzeichnis': leistungsverzeichnis, 'dashboard_data': dashboard_data})
 	
 def design(request):
 		return render(request, 'interface/index.php', {'wert': 'Eigener Text'})
