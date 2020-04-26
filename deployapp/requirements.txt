@@ -2,10 +2,12 @@ backports.weakref==1.0rc1
 bleach==1.5.0
 dj-database-url==0.5.0
 Django==2.0.4
+djangorestframework==2.0.4
+django-filter==2.2.0
 gunicorn==19.7.1
 html5lib==0.9999999
 Markdown==2.2.0
-numpy==1.13.0
+numpy==1.18.3
 protobuf==3.3.0
 psycopg2==2.8.5
 pytz==2018.4
