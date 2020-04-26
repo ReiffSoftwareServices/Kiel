@@ -4,6 +4,7 @@ from geruestproject.models import Geruestbuch, Client, Projekt, Inventar
 from django.db.models import Max
 from datetime import date
 
+
 def index(request):
 # GERÜSTANMELDUNG #
 	#Gerüstnummer ermitteln
@@ -96,3 +97,4 @@ def save_umbau(request):
 	t.save()
 	wert = 'Gerüstumbau erfolgreich angemeldet.'
 	return render(request, 'interface/pages/success.php', {'wert': wert})
+

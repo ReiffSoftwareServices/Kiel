@@ -30,6 +30,7 @@
 					<input type="text" class="form-control" placeholder="L">
 					<input type="text" class="form-control" placeholder="B">
 					<input type="text" class="form-control" placeholder="H">
+					<input type="text" class="form-control" placeholder="Stellhöhe">
 				</div>
 				<small id="emailHelp" class="form-text text-muted">Anmeldekubatur.</small>
 			  </div>
