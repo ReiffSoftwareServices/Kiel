@@ -1,8 +1,8 @@
 from django.urls import path
-from geruestproject.api.views import api_scaffolds
+from geruestproject.api import views
 
 app_name = 'geruestproject'
 
 urlpatterns = [
-    path('<slug>/', api_scaffolds, name="scaffoldinfos")
+    path('xx/', views.UserViewSet, name="scaffoldinfos")
 ]
