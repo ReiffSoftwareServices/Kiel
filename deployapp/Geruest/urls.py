@@ -17,11 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
-from rest_framework import routers
 
-router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'clients', views.ClientsViewSet)
 
 
 urlpatterns = [
@@ -33,7 +29,6 @@ urlpatterns = [
     path('save_abmeldung', views.save_abmeldung, name="save_abmeldung"),
     path('save_umbau', views.save_umbau, name="save_umbau"),
     # REST FRAMEWORK URLS
-    # path('x', include('geruestproject.api.urls')),
+    path('api/', include('geruestproject.api.urls')),
     # url(r'^', include('books.urls'))
-    path('', include(router.urls)),
 ]
