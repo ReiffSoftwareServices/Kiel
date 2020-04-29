@@ -28,8 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
 INSTALLED_APPS = [
+    'corsheaders',
     'rest_framework',
     'geruestproject.apps.GeruestprojectConfig',
     'django.contrib.admin',
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -154,4 +155,4 @@ import django_heroku
 django_heroku.settings(locals())
 """
 
-
+CORS_ORIGIN_WHITELIST = 'http://reff-angular.herokuapp.com',
