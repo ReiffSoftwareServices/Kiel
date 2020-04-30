@@ -6,21 +6,29 @@
 		<p class="card-text">
 			<form>
               <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="OT-Nummer">
-                <small id="emailHelp" class="form-text text-muted">Gerüstnummer</small>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="123456789">
+                <small id="emailHelp" class="form-text text-muted">OT-Nummer</small>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Unit T AB ...">
-                <small id="emailHelp" class="form-text text-muted">PU-Manager</small>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Unit">
+                <small id="emailHelp" class="form-text text-muted">Anlage</small>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="FEB Nummer">
-                <small id="emailHelp" class="form-text text-muted">Firma auswählen</small>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jahr-Monat-Tag-UNIT-ROH-XXX">
+                <small id="emailHelp" class="form-text text-muted">FEB-Nummer</small>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ansprechpartner">
-                <small id="emailHelp" class="form-text text-muted">???</small>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mitarbeiter ACM">
+                <small id="emailHelp" class="form-text text-muted">Ansprechpartner</small>
               </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="beliebiger Text">
+                <small id="emailHelp" class="form-text text-muted">Kommentar</small>
+              </div>
+              <div class="form-group">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="beliebiger Text">
+                  <small id="emailHelp" class="form-text text-muted">Kommentar</small>
+                </div>
               <div class="form-group">
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="beliebiger Text">
                 <small id="emailHelp" class="form-text text-muted">Kommentar</small>
@@ -34,6 +42,10 @@
 				</div>
 				<small id="emailHelp" class="form-text text-muted">Anmeldekubatur.</small>
 			  </div>
+			  <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="beliebiger Text">
+                <small id="emailHelp" class="form-text text-muted">Kommentar</small>
+              </div>
 			  <div class="form-group">
 				<div class="input-group">
 						<input type="text" class="form-control" placeholder="Montage Start">
