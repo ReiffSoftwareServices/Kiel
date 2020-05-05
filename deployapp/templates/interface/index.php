@@ -72,7 +72,7 @@
 	<script src="{% static 'geruestproject/js/popper.min.js' %}"></script>
 	<script src="{% static 'geruestproject/js/bootstrap.js' %}"></script>
 	<script src="{% static 'geruestproject/js/form_step_by_step.js' %}"></script>
-	<script src="{% static 'geruestproject/js/main.js' %}"></script>
+	<script src="{% static 'geruestproject/js/main.js?v=<?php echo time(); ?>' %}"></script>
 	<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 	<!-- <script src="holder.min.js"></script> -->
 	<script>$(function () {

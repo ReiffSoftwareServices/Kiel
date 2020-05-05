@@ -47,7 +47,7 @@ function changeMeasurement(){
 	var inputBValue = document.getElementById("inputB").value
 	var inputHValue = document.getElementById("inputH").value
 	if (isNaN(inputLValue) || isNaN(inputBValue) || isNaN(inputHValue) || inputLValue==""||inputBValue=="" ||inputHValue=="") {
-		document.getElementById("labelMeasurement").innerHTML = "Anmeldekubatur x"
+		document.getElementById("labelMeasurement").innerHTML = "Anmeldekubatur"
 	} else {
 		document.getElementById("labelMeasurement").innerHTML = "Anmeldekubatur ( " + Math.round(inputLValue*inputBValue*inputHValue*100, 2)/100 + "m<sup>3</sup> )"
 	}
@@ -57,9 +57,8 @@ function changeMeasurementPlanning(){
 	var inputLValue = document.getElementById("PLinputL").value
 	var inputBValue = document.getElementById("PLinputB").value
 	var inputHValue = document.getElementById("PLinputH").value
-	Console.log(inputLValue)
 	if (isNaN(inputLValue) || isNaN(inputBValue) || isNaN(inputHValue) || inputLValue==""||inputBValue=="" ||inputHValue=="") {
-		document.getElementById("PLlabelMeasurement").innerHTML = "Anmeldekubatur x"
+		document.getElementById("PLlabelMeasurement").innerHTML = "Anmeldekubatur"
 	} else {
 		document.getElementById("PLlabelMeasurement").innerHTML = "Anmeldekubatur ( " + Math.round(inputLValue*inputBValue*inputHValue*100, 2)/100 + "m<sup>3</sup> )"
 	}

@@ -23,7 +23,7 @@
               </div>
               <div class="form-row">
                   <div class="form-group col-md-4">
-                    <label for="inputState">Gerüstart</label>
+                    <!--<label for="inputState">Gerüstart</label>-->
                     <select id="inputState" class="form-control">
                       <option selected>Gerüst</option>
                       <option>Rollgerüst</option>
@@ -31,9 +31,7 @@
                       <option>Rollgerüst</option>
                     </select>
                   </div>
-                  <div class="form-group col-md-2">
-                  </div>
-                  <div class="form-group col-md-6">
+                  <div class="form-group col-md-4">
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
                       <label class="form-check-label" for="inlineCheckbox4">Intern</label>
@@ -42,6 +40,8 @@
                       <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
                       <label class="form-check-label" for="inlineCheckbox5">Absturzsicherung</label>
                     </div>
+                  </div>
+                  <div class="form-group col-md-4">
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
                       <label class="form-check-label" for="inlineCheckbox6">Rund</label>
@@ -67,9 +67,9 @@
               </div>
               <div class="form-group">
 				<div class="input-group">
-					<input id="PLinputL" type="text" class="form-control" placeholder="L" name="L" required onchange="changeMeasurementPlanning()">
-					<input id="PLinputB" type="text" class="form-control" placeholder="B" name="B" required onchange="changeMeasurementPlanning()">
-					<input id="PLinputH" type="text" class="form-control" placeholder="H" name="H" required onchange="changeMeasurementPlanning()">
+					<input id="PLinputL" type="text" class="form-control" placeholder="L" name="L" required onchange="changeMeasurementPlanning()" title="Länge in qm">
+					<input id="PLinputB" type="text" class="form-control" placeholder="B" name="B" required onchange="changeMeasurementPlanning()" title="Breite in qm">
+					<input id="PLinputH" type="text" class="form-control" placeholder="H" name="H" required onchange="changeMeasurementPlanning()" title="Höhe in qm">
 					<input type="text" class="form-control" placeholder="Stellhöhe">
 				</div>
 				<small id="PLlabelMeasurement" class="form-text text-muted">Anmeldekubatur.</small>
