@@ -21,17 +21,49 @@
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mitarbeiter ACM">
                 <small id="emailHelp" class="form-text text-muted">Ansprechpartner</small>
               </div>
+              <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputState">Gerüstart</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Gerüst</option>
+                      <option>Rollgerüst</option>
+                      <option>Hängegerüst</option>
+                      <option>Rollgerüst</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                      <label class="form-check-label" for="inlineCheckbox4">Intern</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                      <label class="form-check-label" for="inlineCheckbox5">Absturzsicherung</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+                      <label class="form-check-label" for="inlineCheckbox6">Rund</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+                      <label class="form-check-label" for="inlineCheckbox7">Regie</label>
+                    </div>
+                  </div>
+
+                </div>
               <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="beliebiger Text">
-                <small id="emailHelp" class="form-text text-muted">Kommentar</small>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                <small id="emailHelp" class="form-text text-muted">Beschreibung</small>
               </div>
               <div class="form-group">
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="beliebiger Text">
-                  <small id="emailHelp" class="form-text text-muted">Kommentar</small>
+                  <small id="emailHelp" class="form-text text-muted">Localisation</small>
                 </div>
               <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="beliebiger Text">
-                <small id="emailHelp" class="form-text text-muted">Kommentar</small>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="wird automatisch ermittelt...">
+                <small id="emailHelp" class="form-text text-muted">Bestelldatum</small>
               </div>
               <div class="form-group">
 				<div class="input-group">

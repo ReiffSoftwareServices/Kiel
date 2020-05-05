@@ -4,9 +4,15 @@
 	color: #0D3880;
 	margin: 1;
 }
+
 .form-control::placeholder{
 	color: rgba(255, 255, 255, 0.7);
 }
+
+.form-check-input {
+	margin-left: 0 !important;
+}
+
 
 body {
 	background-color: rgba(13, 56, 128, 0.2);
