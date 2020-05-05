@@ -33,12 +33,11 @@
 		<div class="brand"><img class="mb-4 mt-4" src="{% static 'geruestproject/img/rohrer-logo.png' %}" alt="" width="144" ></div>
 				<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 				        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#tab-planning-scaffold" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="fas fa-calendar-alt"></i> Planung</a>
-                        <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#tab-new-scaffold" role="tab" aria-controls="v-pills-home" aria-selected="false"><i class="fas fa-plus-circle"></i> Gerüst-Anmeldung</a>
-						<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#tab-remove-scaffold" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fas fa-minus-circle"></i> Gerüst-Abmeldung</a>
+                        <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#tab-new-scaffold" role="tab" aria-controls="v-pills-home" aria-selected="false"><i class="fas fa-plus-circle"></i> Gerüst-Freigabe</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-measurement-control" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-check"></i> Aufmaßkontrolle</a>
 						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#tab-rebuild-scaffold" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-exchange-alt"></i> Gerüst-Umbau</a>
 						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-enhance-scaffold" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-expand-arrows-alt"></i> Gerüst-Erweiterung</a>
-						<div class="dropdown-divider"></div>
-						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#tab-measurement-control" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-check"></i> Aufmaßkontrolle</a>
+                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#tab-remove-scaffold" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fas fa-minus-circle"></i> Gerüst-Abmeldung</a>
                         <div class="dropdown-divider"></div>
 						<a class="nav-link" href="https://rohrer.herokuapp.com/admin" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-table"></i> Gerüstbuch</a>
 						<a class="nav-link" href="https://reiff-angular.herokuapp.com/" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-chart-line"></i> Dashboard</a>

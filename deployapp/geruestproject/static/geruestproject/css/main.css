@@ -13,7 +13,10 @@
 	margin-left: 0 !important;
 }
 
-
+.selectionPlaceholder{
+	color:red;
+	background-color: green;
+}
 body {
 	background-color: rgba(13, 56, 128, 0.2);
 	color: #0D3880;
