@@ -67,12 +67,12 @@
               </div>
               <div class="form-group">
 				<div class="input-group">
-					<input type="text" class="form-control" placeholder="L">
-					<input type="text" class="form-control" placeholder="B">
-					<input type="text" class="form-control" placeholder="H">
+					<input id="PLinputL" type="text" class="form-control" placeholder="L" name="L" required onchange="changeMeasurementPlanning()">
+					<input id="PLinputB" type="text" class="form-control" placeholder="B" name="B" required onchange="changeMeasurementPlanning()">
+					<input id="PLinputH" type="text" class="form-control" placeholder="H" name="H" required onchange="changeMeasurementPlanning()">
 					<input type="text" class="form-control" placeholder="Stellhöhe">
 				</div>
-				<small id="emailHelp" class="form-text text-muted">Anmeldekubatur.</small>
+				<small id="PLlabelMeasurement" class="form-text text-muted">Anmeldekubatur.</small>
 			  </div>
 			  <div class="form-group">
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="beliebiger Text">
