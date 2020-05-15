@@ -155,4 +155,4 @@ import django_heroku
 django_heroku.settings(locals())
 """
 
-CORS_ORIGIN_WHITELIST = ['http://reiff-angular.herokuapp.com/', 'https://reiff-angular.herokuapp.com/']
+CORS_ORIGIN_WHITELIST = ['http://reiff-angular.herokuapp.com', 'https://reiff-angular.herokuapp.com']

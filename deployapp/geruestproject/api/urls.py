@@ -9,4 +9,5 @@ router.register(r'clients', views.ClientsViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path(r'x/', views.DashboardViewSet),
 ]
