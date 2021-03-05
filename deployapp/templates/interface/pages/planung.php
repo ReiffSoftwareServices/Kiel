@@ -4,7 +4,7 @@
 	    <div class="row">
 	        <div class="col-8">
 	            <h5 class="card-title">Planung</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Planung der Gerüste.</h6>
+                <h6 class="card-subtitle mb-2 text-muted">Planung der Gerüste!</h6>
 	        </div>
 	        <div class="col-4">
 	            <div class="form-group">
